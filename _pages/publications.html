@@ -1,36 +1,68 @@
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
+<!-- _includes/publications.html -->
+{% assign sorted_pubs = site.data.publications | sort: 'year' | reverse %}
+{% assign years = sorted_pubs | map: 'year' | uniq %}
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+<div class="publications">
+  {% for year in years %}
+    <div class="year-section">
+      <h2>{{ year }}</h2>
+      {% for pub in sorted_pubs %}
+        {% if pub.year == year %}
+          <div class="publication">
+            <p class="authors">{{ pub.authors }}</p>
+            <p class="title">{{ pub.title }}</p>
+            <p class="venue">{{ pub.venue }}</p>
+            {% if pub.link %}
+              <a href="{{ pub.link }}" class="paper-link">[PDF]</a>
+            {% endif %}
+            {% if pub.code %}
+              <a href="{{ pub.code }}" class="code-link">[Code]</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+</div>
 
+<style>
+.publications {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
+.year-section {
+  margin-bottom: 2em;
+}
 
+.year-section h2 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5em;
+}
+
+.publication {
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+.authors {
+  margin-bottom: 0.3em;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.venue {
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+
+.paper-link, .code-link {
+  text-decoration: none;
+  color: #0366d6;
+  margin-right: 1em;
+}
+</style>
