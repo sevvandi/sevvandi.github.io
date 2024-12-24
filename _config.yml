@@ -32,7 +32,7 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=XIC1yhMAAAAJ&hl"
+  googlescholar    : "https://scholar.google.com/citations?user=XIC1yhMAAAAJ"
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0002-0337-0395"
   semantic         : # URL
@@ -44,7 +44,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "sevvandi"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : https://www.linkedin.com/in/sevvandi-kandanaarachchi-51288a54/
+  linkedin         : "https://www.linkedin.com/in/sevvandi-kandanaarachchi-51288a54/"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
