@@ -13,6 +13,8 @@ author_profile: true
 {% for year_group in all_posts %}
   <h3>{{ year_group.name }}</h3>
   {% for post in year_group.items %}
-    {% include archive-single.html %}
+    <div class="publication-entry">
+      {{ post.content }}
+    </div>
   {% endfor %}
 {% endfor %}
