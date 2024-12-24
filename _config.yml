@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Sevvandi Kandanaarachchi"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Sevvandi Kandanaarachchi"
+description              : &description "Research Scientist"
 url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -22,13 +22,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Sevvandi"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Senior Research Scientist"
+  location         : "Australia"
+  employer         : "Data61, CSIRO"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "sevvandi.kandanaarachchi@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
