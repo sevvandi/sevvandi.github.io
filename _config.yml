@@ -260,7 +260,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: archive-taxonomy #single
+      layout: single
       author_profile: true
       share: true
       comments: true
