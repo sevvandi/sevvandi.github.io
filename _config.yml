@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Sevvandi Kandanaarachchi"
 title_separator          : "-"
 name                     : &name "Sevvandi Kandanaarachchi"
-description              : &description "Research Scientist"
+description              : &description "Senior Research Scientist"
 url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -21,8 +21,8 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Sevvandi"
+  avatar           : "SK_Smaller.png"
+  name             : # Update with your name
   pronouns         : # example: "she/her"  
   bio              : "Senior Research Scientist"
   location         : "Australia"
@@ -71,7 +71,7 @@ author:
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          :  sevvandi.kandanaarachchi1956
+  youtube          :  "sevvandi.kandanaarachchi1956"
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
