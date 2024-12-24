@@ -1,68 +1,18 @@
-<!-- _includes/publications.html -->
-{% assign sorted_pubs = site.data.publications | sort: 'year' | reverse %}
-{% assign years = sorted_pubs | map: 'year' | uniq %}
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
+{% include base_path %}
 
-<div class="publications">
-  {% for year in years %}
-    <div class="year-section">
-      <h2>{{ year }}</h2>
-      {% for pub in sorted_pubs %}
-        {% if pub.year == year %}
-          <div class="publication">
-            <p class="authors">{{ pub.authors }}</p>
-            <p class="title">{{ pub.title }}</p>
-            <p class="venue">{{ pub.venue }}</p>
-            {% if pub.link %}
-              <a href="{{ pub.link }}" class="paper-link">[PDF]</a>
-            {% endif %}
-            {% if pub.code %}
-              <a href="{{ pub.code }}" class="code-link">[Code]</a>
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+{% assign all_posts = site.publications | group_by: "year" | sort: "name" | reverse %}
+{% for year_group in all_posts %}
+  <h3>{{ year_group.name }}</h3>
+  {% for post in year_group.items %}
+    {% include archive-single.html %}
   {% endfor %}
-</div>
-
-<style>
-.publications {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.year-section {
-  margin-bottom: 2em;
-}
-
-.year-section h2 {
-  color: #333;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.5em;
-}
-
-.publication {
-  margin-bottom: 1.5em;
-  padding-left: 1em;
-}
-
-.authors {
-  margin-bottom: 0.3em;
-}
-
-.title {
-  font-weight: bold;
-  margin-bottom: 0.3em;
-}
-
-.venue {
-  font-style: italic;
-  margin-bottom: 0.3em;
-}
-
-.paper-link, .code-link {
-  text-decoration: none;
-  color: #0366d6;
-  margin-right: 1em;
-}
-</style>
+{% endfor %}
