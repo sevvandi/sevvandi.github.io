@@ -1,6 +1,7 @@
 ---
-title: " "  # leave blank or with a space
+title: " "
 year: 2024
-venue: "Conference Name"
+venue: "Nature"
+paperurl: "https://www.nature.com/articles/yourpaper.pdf"
 ---
-Smith, J., & Jones, K. (2024). Your Paper Title. Conference Name, pp. 123-134.
+Smith, J., Jones, K., & Wilson, M. (2024). Discovery of quantum effects in biological systems. Nature, 584(7819), 123-128.
