@@ -1,6 +1,6 @@
 ---
 title: Leave-One-Out Kernel Density Estimates for Outlier Detection
-year: '2022'
+year: '2021'
 venue: Journal of Computational and Graphical Statistics
 paperurl: 'https://doi.org/10.1080/10618600.2021.2000425'
 ---
