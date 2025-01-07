@@ -13,11 +13,12 @@ author_profile: true
 {% for year_group in all_posts %}
   <h3>{{ year_group.name }}</h3>
   {% for post in year_group.items %}
-    <div class="publication-entry">
-     {{ post.content }}
+    <div class="publication-entry" style="margin-bottom: 1em;">
+      <div style="margin-bottom: 0.1em;">{{ post.content }}</div>
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" style="margin-left: 0.5em;">[PDF]</a>
+        <div style="padding-left: 2em;"><a href="{{ post.paperurl }}">[PDF]</a></div>
       {% endif %}
     </div>
   {% endfor %}
 {% endfor %}
+
