@@ -14,9 +14,9 @@ author_profile: true
   <h3>{{ year_group.name }}</h3>
   {% for post in year_group.items %}
     <div class="publication-entry">
-      {{ post.content | remove: '<p>' | remove: '</p>' }}
+     {{ post.content }}
       {% if post.paperurl %}
-        <a href="{{ post.paperurl }}">[PDF]</a>
+        <a href="{{ post.paperurl }}" style="margin-left: 0.5em;">[PDF]</a>
       {% endif %}
     </div>
   {% endfor %}
