@@ -39,3 +39,29 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+.talks-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.talks-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #333;
+  font-weight: bold;
+}
+
+.talks-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.talks-date {
+  white-space: nowrap;
+}
