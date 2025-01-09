@@ -1,5 +1,9 @@
 talks:
-  - date: "30 Oct 2022"
-    title: "Four, fast geostatistical methods - a comparison"
-    url: "https://example.com/talk1"
-    venue: "The Australian spatial econometrics and statistics workshop"
+  - date: "Nov 2024"
+    title: "Extreme value modelling of feature residuals for anomaly detection in dynamic graphs"
+    url: "https://www.slideshare.net/slideshow/extreme-value-modelling-of-feature-residuals-for-anomaly-detection-in-dynamic-graphs/274232195"
+    venue: "International Conference on Soft Computing & Machine Intelligence, Melbourne, Australia"
+ - date: "Oct 2024"
+    title: "Graphons of line graphs"
+    url: "https://www.slideshare.net/slideshow/graphons-of-line-graphs-talk-at-uni-sydney/274232161"
+    venue: "Monash University, Melbourne, Australia"
