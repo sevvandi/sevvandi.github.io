@@ -54,7 +54,11 @@ talks:
   - date: "May 2023"
     title: "Anomalous Networks"
     url: "https://www.slideshare.net/SevvandiKandanaarach/anomalous-networks"
-    venue: "Pint of Science, Melbourne"        
+    venue: "Pint of Science, Melbourne"  
+  - date: "Feb 2023"
+    title: "Four, fast geostatistical methods - a comparison"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/four-fast-geostatistical-methods-a-comparison"
+    venue: "The Australian spatial econometrics and statistics workshop, Melbourne"      
     
 
  
