@@ -44,9 +44,18 @@ talks:
     url: "https://www.slideshare.net/slideshow/sophisticated-tools-for-spatiotemporal-data-exploration/259369131"
     venue: "MODSIM 2023, Darwin, Australia" 
   - date: "June 2023"
-    title: "A Time Series Of Networks. Is Everything Ok? Are There Anomalies?"
+    title: "A time series of networks. Is everything OK? Are there anomalies?"
     url: "https://www.slideshare.net/SevvandiKandanaarach/a-time-series-of-networks-is-everything-ok-are-there-anomalies"
-    venue: "ISF 2023, Charlottesville, USA"     
+    venue: "ISF 2023, Charlottesville, USA"  
+  - date: "May 2023"
+    title: "Using educational models to explain algorithm evaluation"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/explainable-algorithm-evaluationpptx"
+    venue: "RMIT University, Melbourne"    
+  - date: "May 2023"
+    title: "Anomalous Networks"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/anomalous-networks"
+    venue: "Pint of Science, Melbourne"        
+    
 
  
     
