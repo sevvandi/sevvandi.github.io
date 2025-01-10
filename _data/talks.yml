@@ -67,7 +67,15 @@ talks:
     title: "Evaluating Algorithm Portfolios using Item Response Theory"
     url: "https://www.slideshare.net/SevvandiKandanaarach/algorithm-evaluation-using-item-response-theorypptx"
     venue: "OPTIMA Seminar Series, Melbourne"         
-    
+  - date: "Apr 2022"
+    title: "From ensembles to computer networks"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/from-ensembles-to-computer-networks"
+    venue: "CSIRO, Data61, Machine Learning Seminar, Australia"     
+  - date: "Feb 2022"
+    title: "Getting better at detecting anomalies by using ensembles"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/getting-better-at-detecting-anomalies-by-using-ensembles"
+    venue: "ANZIAM 2022, Australia"         
+
 
  
     
