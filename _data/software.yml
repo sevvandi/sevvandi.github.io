@@ -15,3 +15,8 @@ packages:
     description: "Forecast the structure of dynamic graphs"
     github: "https://sevvandi.github.io/netseer/"
     cran: "https://cran.r-project.org/web/packages/netseer/"    
+  - logo: "stxplore.jpg"  # store in assets/images/
+    name: "stxplore:"
+    description: "Tools for exploring spatio-temporal data"
+    github: "https://sevvandi.github.io/stxplore/"
+    cran: "https://cran.r-project.org/web/packages/stxplore/"        
