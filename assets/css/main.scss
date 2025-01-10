@@ -155,12 +155,14 @@ hr {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  border: none;    /* Remove table border */
 }
 
 .software-table td {
   padding: 20px 0;
-  border: none;
+  border: none;    /* Remove cell borders */
   vertical-align: middle;
+  background: none; /* Remove any background */
 }
 
 .logo-cell {
