@@ -58,7 +58,15 @@ talks:
   - date: "Feb 2023"
     title: "Four, fast geostatistical methods - a comparison"
     url: "https://www.slideshare.net/SevvandiKandanaarach/four-fast-geostatistical-methods-a-comparison"
-    venue: "The Australian spatial econometrics and statistics workshop, Melbourne"      
+    venue: "The Australian spatial econometrics and statistics workshop, Melbourne"     
+  - date: "Nov 2022"
+    title: "Comparison of geostatistical methods for spatial data"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/comparison-of-geostatistical-methods-for-spatial-data"
+    venue: "Australasian Applied Statistics Conference 2022, Inverloch, Victoria"     
+  - date: "May 2022"
+    title: "Evaluating Algorithm Portfolios using Item Response Theory"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/algorithm-evaluation-using-item-response-theorypptx"
+    venue: "OPTIMA Seminar Series, Melbourne"         
     
 
  
