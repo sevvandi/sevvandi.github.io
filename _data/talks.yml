@@ -75,6 +75,22 @@ talks:
     title: "Getting better at detecting anomalies by using ensembles"
     url: "https://www.slideshare.net/SevvandiKandanaarach/getting-better-at-detecting-anomalies-by-using-ensembles"
     venue: "ANZIAM 2022, Australia"         
+  - date: "Oct 2021"
+    title: "Evaluating algorithms using Item Response Theory"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/evaluating-algorithms-using-item-response-theory"
+    venue: "RMIT EMCR Symposium, Melbourne"    
+  - date: "Sep 2021"
+    title: "Anomalies! You can't escape them"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/anomalies-you-cant-escape-them"
+    venue: "RLadies, Melbourne"    
+  - date: "Aug 2021"
+    title: "Anomalies and events keep us on our toes!"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/anomalies-and-events-keep-us-on-our-toes-250032356"
+    venue: "Future of Data Science, Australia"      
+  - date: "July 2021"
+    title: "Here is the anomalow-down!"
+    url: "https://www.slideshare.net/SevvandiKandanaarach/here-is-the-anomalowdown"
+    venue: "useR! 2021"         
 
 
  
