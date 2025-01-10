@@ -1,0 +1,6 @@
+software:
+  - logo: "airt.png"  # store in assets/images/
+    name: "airt"
+    description: "Algorithm evaluation using Item Response Theory as described in Kandanaarachchi & Smith-Miles (2023)"
+    github: "https://sevvandi.github.io/airt/"
+    cran: "https://cran.r-project.org/web/packages/airt/"

@@ -1,0 +1,23 @@
+---
+layout: archive
+title: "Software"
+permalink: /software/
+author_profile: true
+---
+
+<div class="software-container">
+  {% for item in site.data.software.software %}
+  <div class="software-row">
+    <div class="software-logo">
+      <img src="/assets/images/{{ item.logo }}" alt="{{ item.name }} logo" width="100">
+    </div>
+    <div class="software-description">
+      <strong>{{ item.name }}</strong> {{ item.description }}
+    </div>
+    <div class="software-buttons">
+      <a href="{{ item.github }}" class="btn github" target="_blank">GITHUB</a>
+      <a href="{{ item.cran }}" class="btn cran" target="_blank">CRAN</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
