@@ -5,19 +5,21 @@ permalink: /software/
 author_profile: true
 ---
 
-<div class="software-container">
-  {% for item in site.data.software.software %}
-  <div class="software-row">
-    <div class="software-logo">
-      <img src="/assets/images/{{ item.logo }}" alt="{{ item.name }} logo" width="100">
-    </div>
-    <div class="software-description">
-      <strong>{{ item.name }}</strong> {{ item.description }}
-    </div>
-    <div class="software-buttons">
-      <a href="{{ item.github }}" class="btn github" target="_blank">GITHUB</a>
-      <a href="{{ item.cran }}" class="btn cran" target="_blank">CRAN</a>
-    </div>
-  </div>
-  {% endfor %}
-</div>
+<table class="software-table">
+  <tbody>
+    {% for item in site.data.software.software %}
+    <tr>
+      <td class="logo-cell">
+        <img src="/assets/images/{{ item.logo }}" alt="{{ item.name }} logo" width="100">
+      </td>
+      <td class="description-cell">
+        <strong>{{ item.name }}</strong> {{ item.description }}
+      </td>
+      <td class="button-cell">
+        <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
+        <a href="{{ item.cran }}" class="software-btn cran" target="_blank">CRAN</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

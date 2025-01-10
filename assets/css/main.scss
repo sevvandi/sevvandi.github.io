@@ -139,52 +139,61 @@
 }
 
 
-.software-container {
+.software-table {
   width: 100%;
+  border-collapse: collapse;
   margin: 20px 0;
 }
 
-.software-row {
-  display: grid;
-  grid-template-columns: 120px auto 200px;
-  gap: 20px;
+.software-table td {
   padding: 20px 0;
-  border-bottom: 1px solid #ddd;
-  align-items: center;
+  border: none;
+  vertical-align: middle;
 }
 
-.software-logo img {
-  max-width: 100%;
+.logo-cell {
+  width: 120px;
+}
+
+.logo-cell img {
+  max-width: 100px;
   height: auto;
 }
 
-.software-description {
+.description-cell {
+  padding-right: 30px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-.software-buttons {
-  display: flex;
-  gap: 10px;
+.button-cell {
+  width: 200px;
+  text-align: right;
 }
 
-.btn {
-  padding: 5px 15px;
-  border-radius: 4px;
+.software-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-left: 8px;
+  border-radius: 3px;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 .github {
-  background-color: #6cc644;
+  background-color: #5cb85c;
+  color: white;
 }
 
 .cran {
-  background-color: #5d9cec;
+  background-color: #428bca;
+  color: white;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.software-btn:hover {
+  opacity: 0.85;
+  text-decoration: none;
 }
