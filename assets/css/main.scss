@@ -151,22 +151,17 @@ hr {
   border-bottom: 2px solid #333;
 }
 
-.software-table {
+.software-container {
   width: 100%;
-  border-collapse: collapse;
   margin: 20px 0;
-  border: none;    /* Remove table border */
 }
 
-.software-table td {
+.software-item {
+  display: grid;
+  grid-template-columns: 120px auto 200px;
+  gap: 20px;
   padding: 20px 0;
-  border: none;    /* Remove cell borders */
-  vertical-align: middle;
-  background: none; /* Remove any background */
-}
-
-.logo-cell {
-  width: 120px;
+  align-items: center;
 }
 
 .logo-cell img {
@@ -181,7 +176,6 @@ hr {
 }
 
 .button-cell {
-  width: 200px;
   text-align: right;
 }
 

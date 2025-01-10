@@ -7,42 +7,38 @@ author_profile: true
 
 <h2>Shiny Apps</h2>
 <hr>
-<table class="software-table">
-  <tbody>
-    {% for item in site.data.software.shiny %}
-    <tr>
-      <td class="logo-cell">
-        <img src="/assets/images/{{ item.logo }}" alt="{{ item.description }}" width="100">
-      </td>
-      <td class="description-cell">
-        {{ item.description }}
-      </td>
-      <td class="button-cell">
-        <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
-        <a href="{{ item.shinyapps }}" class="software-btn shiny" target="_blank">APP</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="software-container">
+  {% for item in site.data.software.shiny %}
+  <div class="software-item">
+    <div class="logo-cell">
+      <img src="/assets/images/{{ item.logo }}" alt="{{ item.description }}" width="100">
+    </div>
+    <div class="description-cell">
+      {{ item.description }}
+    </div>
+    <div class="button-cell">
+      <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
+      <a href="{{ item.shinyapps }}" class="software-btn shiny" target="_blank">APP</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 
 <h2>R Packages</h2>
 <hr>
-<table class="software-table">
-  <tbody>
-    {% for item in site.data.software.packages %}
-    <tr>
-      <td class="logo-cell">
-        <img src="/assets/images/{{ item.logo }}" alt="{{ item.description }}" width="100">
-      </td>
-      <td class="description-cell">
-        {{ item.description }}
-      </td>
-      <td class="button-cell">
-        <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
-        <a href="{{ item.cran }}" class="software-btn cran" target="_blank">CRAN</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="software-container">
+  {% for item in site.data.software.packages %}
+  <div class="software-item">
+    <div class="logo-cell">
+      <img src="/assets/images/{{ item.logo }}" alt="{{ item.description }}" width="100">
+    </div>
+    <div class="description-cell">
+      {{ item.description }}
+    </div>
+    <div class="button-cell">
+      <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
+      <a href="{{ item.cran }}" class="software-btn cran" target="_blank">CRAN</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
