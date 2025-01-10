@@ -5,8 +5,23 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="teaching-table">
+  <div class="teaching-header">
+    <div class="teaching-year">Year</div>
+    <div class="teaching-org">Organisation/Event</div>
+    <div class="teaching-course">Course</div>
+  </div>
+  {% for item in site.data.teaching.teaching %}
+    <div class="teaching-row">
+      <div class="teaching-year">{{ item.year }}</div>
+      <div class="teaching-org">{{ item.org }}</div>
+      <div class="teaching-course">
+        {% if item.url %}
+          <a href="{{ item.url }}" target="_blank">{{ item.course }}</a>
+        {% else %}
+          {{ item.course }}
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

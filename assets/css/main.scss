@@ -65,3 +65,39 @@
 .talks-date {
   white-space: nowrap;
 }
+
+
+.teaching-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.teaching-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #333;
+  font-weight: bold;
+}
+
+.teaching-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.teaching-year {
+  white-space: nowrap;
+}
+
+.teaching-course a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.teaching-course a:hover {
+  text-decoration: underline;
+}
