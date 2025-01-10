@@ -139,6 +139,18 @@
 }
 
 
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+hr {
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #333;
+}
+
 .software-table {
   width: 100%;
   border-collapse: collapse;
@@ -189,6 +201,11 @@
 }
 
 .cran {
+  background-color: #428bca;
+  color: white;
+}
+
+.shiny {
   background-color: #428bca;
   color: white;
 }

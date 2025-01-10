@@ -5,15 +5,38 @@ permalink: /software/
 author_profile: true
 ---
 
+<h2>Shiny Apps</h2>
+<hr>
 <table class="software-table">
   <tbody>
-    {% for item in site.data.software.software %}
+    {% for item in site.data.software.shiny %}
     <tr>
       <td class="logo-cell">
-        <img src="/assets/images/{{ item.logo }}" alt="{{ item.name }} logo" width="100">
+        <img src="/assets/images/{{ item.logo }}" alt="{{ item.description }}" width="100">
       </td>
       <td class="description-cell">
-        <strong>{{ item.name }}</strong> {{ item.description }}
+        {{ item.description }}
+      </td>
+      <td class="button-cell">
+        <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
+        <a href="{{ item.shinyapps }}" class="software-btn shiny" target="_blank">APP</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>R Packages</h2>
+<hr>
+<table class="software-table">
+  <tbody>
+    {% for item in site.data.software.packages %}
+    <tr>
+      <td class="logo-cell">
+        <img src="/assets/images/{{ item.logo }}" alt="{{ item.description }}" width="100">
+      </td>
+      <td class="description-cell">
+        {{ item.description }}
       </td>
       <td class="button-cell">
         <a href="{{ item.github }}" class="software-btn github" target="_blank">GITHUB</a>
