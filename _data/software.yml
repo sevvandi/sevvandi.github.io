@@ -1,6 +1,6 @@
 shiny:
   - logo: "airt.png"
-    description: "AIRT App for Algorithm Evaluation using Item Response Theory"
+    description: "Shiny App for algorithm evaluation using Item Response Theory"
     github: "https://github.com/broldfield/AIRT_Shiny"
     shinyapps: "https://sevvandi.shinyapps.io/AIRT"
 
@@ -10,3 +10,8 @@ packages:
     description: "Algorithm evaluation using Item Response Theory as described in Kandanaarachchi & Smith-Miles (2023)"
     github: "https://sevvandi.github.io/airt/"
     cran: "https://cran.r-project.org/web/packages/airt/"
+  - logo: "netseer.png"  # store in assets/images/
+    name: "netseer:"
+    description: "Forecast the structure of dynamic graphs"
+    github: "https://sevvandi.github.io/netseer/"
+    cran: "https://cran.r-project.org/web/packages/netseer/"    
