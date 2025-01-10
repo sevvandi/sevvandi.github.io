@@ -108,17 +108,19 @@
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  border: none;
+}
+
+.podcasts-table th,
+.podcasts-table td {
+  text-align: left;
+  padding: 10px 20px 10px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
 }
 
 .podcasts-table th {
-  text-align: left;
-  padding: 10px 20px 10px 0;
   border-bottom: 2px solid #333;
-}
-
-.podcasts-table td {
-  padding: 10px 20px 10px 0;
-  border-bottom: 1px solid #ddd;
 }
 
 .podcasts-table a {
