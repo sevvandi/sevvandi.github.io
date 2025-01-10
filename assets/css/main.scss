@@ -106,31 +106,26 @@
 
 .podcasts-table {
   width: 100%;
+  border-collapse: collapse;
   margin: 20px 0;
 }
 
-.podcasts-header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 20px;
-  padding: 10px 0;
+.podcasts-table th {
+  text-align: left;
+  padding: 10px;
   border-bottom: 2px solid #333;
-  font-weight: bold;
 }
 
-.podcasts-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 20px;
-  padding: 10px 0;
+.podcasts-table td {
+  padding: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-.podcasts-episode a {
+.podcasts-table a {
   color: #2a7ae2;
   text-decoration: none;
 }
 
-.podcasts-episode a:hover {
+.podcasts-table a:hover {
   text-decoration: underline;
 }
