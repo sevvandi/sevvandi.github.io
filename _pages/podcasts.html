@@ -11,17 +11,18 @@ author_profile: true
     <div class="podcasts-episode">Episode</div>
     <div class="podcasts-guest">Guest</div>
   </div>
-  {% for item in site.data.podcasts.podcasts %}
+  {% for podcast in site.data.podcasts.podcasts %}
     <div class="podcasts-row">
-      <div class="podcasts-name">{{ item.name }}</div>
-      <div class="podcasts-episode">{{ item.episode }}</div>
-      <div class="podcasts-guest">{{ item.guest }}</div>
-        {% if item.url %}
-          <a href="{{ item.url }}" target="_blank">{{ item.episode }}</a>
+      <div class="podcasts-name">{{ podcast.name }}</div>
+      <div class="podcasts-episode">
+        {% if podcast.url %}
+          <a href="{{ podcast.url }}" target="_blank">{{ podcast.episode }}</a>
         {% else %}
-          {{ item.episode }}
+          {{ podcast.episode }}
         {% endif %}
       </div>
+      <div class="podcasts-guest">{{ podcast.guest }}</div>
     </div>
   {% endfor %}
 </div>
+

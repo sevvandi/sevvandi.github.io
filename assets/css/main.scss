@@ -111,7 +111,7 @@
 
 .podcasts-header {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
   padding: 10px 0;
   border-bottom: 2px solid #333;
@@ -120,14 +120,10 @@
 
 .podcasts-row {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
-}
-
-.podcasts-name {
-  white-space: nowrap;
 }
 
 .podcasts-episode a {
@@ -135,6 +131,6 @@
   text-decoration: none;
 }
 
-.podcasts-guest a:hover {
+.podcasts-episode a:hover {
   text-decoration: underline;
 }
