@@ -104,30 +104,36 @@
 
 
 
-.podcasts-table {
+.podcasts-container {
   width: 100%;
-  border-collapse: collapse;
   margin: 20px 0;
-  border: none;
 }
 
-.podcasts-table th,
-.podcasts-table td {
-  text-align: left;
+.podcasts-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
   padding: 10px 20px 10px 0;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-.podcasts-table th {
   border-bottom: 2px solid #333;
 }
 
-.podcasts-table a {
+.podcasts-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.podcasts-name, .podcasts-episode, .podcasts-guest {
+  text-align: left;
+}
+
+.podcasts-episode a {
   color: #2a7ae2;
   text-decoration: none;
 }
 
-.podcasts-table a:hover {
+.podcasts-episode a:hover {
   text-decoration: underline;
 }

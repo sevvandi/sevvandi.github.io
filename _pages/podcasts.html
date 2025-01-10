@@ -5,21 +5,24 @@ permalink: /podcasts/
 author_profile: true
 ---
 
-<table class="podcasts-table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Episode</th>
-      <th>Guest</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for podcast in site.data.podcasts.podcasts %}
-    <tr>
-      <td>{{ podcast.name }}</td>
-      <td>{% if podcast.url %}<a href="{{ podcast.url }}">{{ podcast.episode }}</a>{% else %}{{ podcast.episode }}{% endif %}</td>
-      <td>{{ podcast.guest }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="podcasts-container">
+  <div class="podcasts-header">
+    <div class="podcasts-name">Name</div>
+    <div class="podcasts-episode">Episode</div>
+    <div class="podcasts-guest">Guest</div>
+  </div>
+  
+  {% for podcast in site.data.podcasts.podcasts %}
+  <div class="podcasts-row">
+    <div class="podcasts-name">{{ podcast.name }}</div>
+    <div class="podcasts-episode">
+      {% if podcast.url %}
+        <a href="{{ podcast.url }}">{{ podcast.episode }}</a>
+      {% else %}
+        {{ podcast.episode }}
+      {% endif %}
+    </div>
+    <div class="podcasts-guest">{{ podcast.guest }}</div>
+  </div>
+  {% endfor %}
+</div>
