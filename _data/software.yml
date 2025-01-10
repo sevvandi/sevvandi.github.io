@@ -30,17 +30,17 @@ packages:
     description: "An anomaly detection ensemble using Item Response Theory as described in Kandanaarachchi(2022)"
     github: "https://sevvandi.github.io/outlierensembles/"
     cran: "https://cran.r-project.org/web/packages/outlierensembles/"  
- - logo: "lookout.png"  # store in assets/images/
+  - logo: "lookout.png"  # store in assets/images/
     name: "lookout:"
     description: "Anomaly detection using leave-one-out kernel density estimation as described in Kandanaarachchi & Hyndman(2021)"
     github: "https://sevvandi.github.io/lookout/"
     cran: "https://cran.r-project.org/web/packages/lookout/"    
- - logo: "dobin.png"  # store in assets/images/
+  - logo: "dobin.png"  # store in assets/images/
     name: "dobin:"
     description: "Dimension reduction for anomaly detection as described in Kandanaarachchi & Hyndman(2020)"
     github: "https://sevvandi.github.io/dobin/"
     cran: "https://cran.r-project.org/web/packages/dobin/"
- - logo: "eventstream.png"  # store in assets/images/
+  - logo: "eventstream.png"  # store in assets/images/
     name: "eventstream:"
     description: "Detecting events in spatio-temporal data streams as described in Kandanaarachchi,Hyndman & Smith-Miles(2020)"
     github: "https://sevvandi.github.io/eventstream/"
