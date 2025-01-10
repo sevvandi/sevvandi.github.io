@@ -10,7 +10,7 @@ talks:
   - date: "Oct 2024"
     title: "Forecasting graphs using time series and flux balance analysis"
     url: "https://www.slideshare.net/slideshow/forecasting-graphs-using-time-series-and-flux-balance-analysis/274232067"
-    venue: "WIMSIG Conference 2024, University of Sydney, Sydney"    
+    venue: "WIMSIG 2024, University of Sydney, Sydney"    
   - date: "Oct 2024"
     title: "Representing Sparse Graphs with Graphons: Challenges and Approaches"
     url: "https://www.slideshare.net/slideshow/graphons-of-line-graphs-talk-at-uni-sydney/274232161"
