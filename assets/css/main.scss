@@ -101,3 +101,40 @@
 .teaching-course a:hover {
   text-decoration: underline;
 }
+
+
+
+.podcasts-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.podcasts-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #333;
+  font-weight: bold;
+}
+
+.podcasts-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.podcasts-name {
+  white-space: nowrap;
+}
+
+.podcasts-episode a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.podcasts-guest a:hover {
+  text-decoration: underline;
+}
