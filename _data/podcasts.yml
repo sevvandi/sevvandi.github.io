@@ -14,14 +14,33 @@ podcasts:
   - name: "The Random Sample"
     episode: "Optimisation: The Intelligence Behind AI"
     guest: "Prof Peter Stuckey"
-    url: "https://www.therandomsample.com.au/podcast/discrete-optimisation/ "   
+    url: "https://www.therandomsample.com.au/podcast/discrete-optimisation/ " 
+  - name: "Forecasting Impact"
+    episode: "President of International Institute of Forecasters"
+    guest: "Prof George Athanasopoulos"
+    url: "https://www.buzzsprout.com/1641538/episodes/13044152-george-athanasopoulos-president-of-international-institute-of-forecasters"   
+  - name: "Forecasting Impact"
+    episode: "Two Sri Lankan sisters"
+    guest: "Dr Priyanga Dilini Talagala and Dr Thiyanga Talagala"
+    url: "https://www.buzzsprout.com/1641538/episodes/13375707-priyanga-dilini-talagala-and-thiyanga-talagala"     
+  - name: "Forecasting Impact"
+    episode: "Mastering the rare art of machine learning deployment"
+    guest: "Dr Eric Siegel"
+    url: "https://www.buzzsprout.com/1641538/episodes/14364471-eric-siegel-on-mastering-the-rare-art-of-machine-learning-deployment"     
+  - name: "Forecasting Impact"
+    episode: "Open source forecasting and R"
+    guest: "Mr Mitchell O'Hara-Wild"
+    url: "https://www.buzzsprout.com/1641538/episodes/15064586-mitchell-o-hara-wild-on-open-source-forecasting-and-r"     
+
+  
+    
+    
  
  
    
     
     
     
-
 
 
 
