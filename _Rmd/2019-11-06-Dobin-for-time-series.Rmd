@@ -9,12 +9,12 @@ tags:
 layout: post
 output: 
   html_document:
-    fig_path: "../assets/images/posts/"
+    fig_path: "../_Rmd/"
     self_contained: true
     keep_md: true
 ---
 
-This is a blogpost I did in Nov 2019 on dobin -  a method used for dimension reduction for anomalies. 
+This is a blogpost I did in Nov 2019 on dobin -  a method used for dimension reduction for anomaly detection. 
 
 The R package *dobin* can be used as a dimension reduction tool for anomaly detection. So, if we have a dataset of $N$ independent observations,  where each observation is of dimension $p$, *dobin* can be used to find a new basis, such that the anomalies of this dataset are highlighted using fewer basis vectors (see [here](https://sevvandi.github.io/dobin/index.html)). 
 

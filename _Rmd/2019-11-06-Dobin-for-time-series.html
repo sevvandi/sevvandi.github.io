@@ -357,12 +357,12 @@ display: none;
 </div>
 
 
-<p>This is a blogpost I did in Nov 2019. I’m posting it again on my new
-website.</p>
+<p>This is a blogpost I did in Nov 2019 on dobin - a method used for
+dimension reduction for anomaly detection.</p>
 <p>The R package <em>dobin</em> can be used as a dimension reduction
-tool for outlier detection. So, if we have a dataset of <span class="math inline">\(N\)</span> independent observations, where each
+tool for anomaly detection. So, if we have a dataset of <span class="math inline">\(N\)</span> independent observations, where each
 observation is of dimension <span class="math inline">\(p\)</span>,
-<em>dobin</em> can be used to find a new basis, such that the outliers
+<em>dobin</em> can be used to find a new basis, such that the anomalies
 of this dataset are highlighted using fewer basis vectors (see <a href="https://sevvandi.github.io/dobin/index.html">here</a>).</p>
 <p>But, how do we use <em>dobin</em> for time series data?
 <em>Dobin</em> is not meant for raw time series data because it is
@@ -375,7 +375,7 @@ in each time series window will be denoted by a point in <span class="math inlin
 <h2>A Synthetic Example</h2>
 <p>Let’s look at an example. We make a normally distributed time series
 of length <span class="math inline">\(6000\)</span> and insert an
-outlier at the position <span class="math inline">\(1010\)</span>.</p>
+anomaly at the position <span class="math inline">\(1010\)</span>.</p>
 <pre class="r"><code>knitr::opts_chunk$set()
 library(tsfeatures)
 library(dplyr)
@@ -385,7 +385,7 @@ library(ggplot2)
 set.seed(1)
 # Generate 6000 random normally distributed points for a time series
 y &lt;- rnorm(6000)
-# Insert an additive outlier at position 1010
+# Insert an additive anomaly at position 1010
 y[1010] &lt;- 6
 df &lt;- cbind.data.frame(1:6000, y)
 colnames(df) &lt;- c(&quot;Index&quot;, &quot;Value&quot;)
@@ -398,7 +398,7 @@ non-overlapping windows? If we use overlapping windows, say sliding by
 series contributes to <span class="math inline">\(50\)</span> windows.
 Later, when we compute features of these time series windows, these
 <span class="math inline">\(50\)</span> windows will have similar
-features, but they will not be outliers in the feature space, because
+features, but they will not be anomalies in the feature space, because
 there are <span class="math inline">\(50\)</span> of them. That is why
 we use non-overlapping windows.</p>
 <p>Also, note that we need the time series to have a decent length to
@@ -422,7 +422,7 @@ head(ftrs)</code></pre>
 ## #   x_acf10 &lt;dbl&gt;, diff1_acf1 &lt;dbl&gt;, diff1_acf10 &lt;dbl&gt;, diff2_acf1 &lt;dbl&gt;,
 ## #   diff2_acf10 &lt;dbl&gt;</code></pre>
 <p>It is easier to find a good set of basis vectors that highlight
-outliers when there are a lot more points compared to the dimensions of
+anomalies when there are a lot more points compared to the dimensions of
 the dataset, i.e. <span class="math inline">\(N &gt; p\)</span>. In this
 case the feature space is <span class="math inline">\(16\)</span>
 dimensional, and we have <span class="math inline">\(120\)</span>
@@ -497,7 +497,7 @@ ggplot(df, aes(Index, Streamflow)) + geom_point() + geom_line()</code></pre>
 <p>We see this point corresponds to the window with the highest spike in
 the time series, as this is the only spike greater than 75 units.</p>
 <p>So, in summary <em>dobin</em> can be used as a dimension reduction
-technique for outlier detection for time series data, as long as the
+technique for anomaly detection for time series data, as long as the
 data is prepared appropriately.</p>
 </div>
 
