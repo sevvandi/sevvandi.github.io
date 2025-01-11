@@ -1,28 +1,30 @@
 library(rmarkdown)
 
-# Use absolute paths
-project_dir <- getwd() #"."  # Replace with your actual path
-rmd_dir <- file.path(project_dir, "_Rmd")
-posts_dir <- file.path(project_dir, "_posts")
+# Print working directory and check directory structure
+print(paste("Working directory:", getwd()))
+print(paste("_Rmd exists:", dir.exists("_Rmd")))
 
-# Check if directories exist
-if (!dir.exists(rmd_dir)) {
-  stop("_Rmd directory not found at: ", rmd_dir)
-}
-if (!dir.exists(posts_dir)) {
-  stop("_posts directory not found at: ", posts_dir)
+# Create _posts directory if it doesn't exist
+if (!dir.exists("_posts")) {
+  dir.create("_posts")
+  print("Created _posts directory")
 }
 
-# Get list of Rmd files
-rmd_files <- list.files(rmd_dir, pattern = "\\.Rmd$", full.names = TRUE)
+# Find all Rmd files
+rmd_files <- list.files("_Rmd", pattern = "\\.Rmd$", full.names = TRUE)
+print(paste("Rmd files found:", length(rmd_files)))
+print(rmd_files)
 
-if (length(rmd_files) == 0) {
-  stop("No .Rmd files found in: ", rmd_dir)
-}
-
-# Process each file
-for (file in rmd_files) {
-  output_file <- file.path(posts_dir, 
-                           gsub("\\.Rmd$", ".md", basename(file)))
-  render(file, output_file = output_file)
+# Only proceed if files were found
+if (length(rmd_files) > 0) {
+  for (file in rmd_files) {
+    print(paste("Processing:", file))
+    try({
+      output_file <- file.path("_posts", 
+                               gsub("\\.Rmd$", ".md", basename(file)))
+      render(file, output_file = output_file)
+    })
+  }
+} else {
+  stop("No .Rmd files found in _Rmd directory")
 }

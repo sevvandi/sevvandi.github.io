@@ -12,10 +12,21 @@ jobs:
         
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("knitr", "rmarkdown"))'
+          Rscript -e 'install.packages(c("knitr", "rmarkdown"), repos="https://cloud.r-project.org")'
+          
+      - name: Create directories
+        run: |
+          mkdir -p _posts
+          mkdir -p _Rmd
+          
+      - name: List directory contents
+        run: ls -la
           
       - name: Render Rmd files
-        run: Rscript render_posts.R
+        run: |
+          Rscript -e 'print(getwd())'
+          Rscript -e 'print(list.files())'
+          Rscript render_posts.R
         
       - name: Build Jekyll site
         uses: actions/jekyll-build-pages@v1
