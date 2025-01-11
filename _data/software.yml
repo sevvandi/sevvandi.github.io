@@ -1,6 +1,6 @@
 shiny:
   - logo: "airt.png"
-    description: "Shiny App for algorithm evaluation using Item Response Theory (Developed by Brodie Oldfield)"
+    description: "Shiny App for algorithm evaluation using Item Response Theory - developed by Brodie Oldfield"
     github: "https://github.com/broldfield/AIRT_Shiny"
     shinyapps: "https://sevvandi.shinyapps.io/AIRT"
 
