@@ -9,7 +9,7 @@ tags:
 layout: post
 output: 
   html_document:
-    fig_path: "assets/images/posts/"
+    fig_path: "../assets/images/posts/"
     self_contained: true
     keep_md: true
 ---
