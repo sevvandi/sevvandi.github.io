@@ -1,11 +1,5 @@
----
-title: 'Using dobin for time series data'
-date: 2019-11-16
-tags: 
-  - anomaly detection
-  - time series 
-  - dimension reduction
----
+This is a blogpost I did in Nov 2019. I’m posting it again on my new
+website.
 
 The R package *dobin* can be used as a dimension reduction tool for
 outlier detection. So, if we have a dataset of *N* independent
@@ -42,7 +36,7 @@ length 6000 and insert an outlier at the position 1010.
     colnames(df) <- c("Index", "Value")
     ggplot(df, aes(Index, Value)) + geom_point() + theme_bw()
 
-![](2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/setup-1.png)
+![](/Users/kan092/Library/CloudStorage/OneDrive-CSIRO/Documents/repos/sevvandi.github.io/_posts/2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/setup-1.png)
 
 Now, let us break the time series into non-overlapping chunks of length
 50, i.e. we get 120 chunks or windows. Why do we use non-overlapping
@@ -64,17 +58,16 @@ compute features. For each window we compute time series features using
     head(ftrs)
 
     ## # A tibble: 6 × 16
-    ##   frequency nperiods seasonal_period  trend   spike linearity curvature   e_acf1
-    ##       <dbl>    <dbl>           <dbl>  <dbl>   <dbl>     <dbl>     <dbl>    <dbl>
-    ## 1         1        0               1 0.0506 1.01e-3     0.354    0.212  -0.00211
-    ## 2         1        0               1 0.110  6.68e-4    -0.500    0.0679 -0.147  
-    ## 3         1        0               1 0.201  8.10e-4    -2.18    -0.836  -0.341  
-    ## 4         1        0               1 0.129  5.11e-4    -0.402   -1.57   -0.209  
-    ## 5         1        0               1 0.134  7.74e-4    -0.817    1.39   -0.165  
-    ## 6         1        0               1 0.0673 1.06e-3     0.130    0.681  -0.318  
-    ## # ℹ 8 more variables: e_acf10 <dbl>, entropy <dbl>, x_acf1 <dbl>,
-    ## #   x_acf10 <dbl>, diff1_acf1 <dbl>, diff1_acf10 <dbl>, diff2_acf1 <dbl>,
-    ## #   diff2_acf10 <dbl>
+    ##   frequency nperiods seasonal_period  trend    spike linearity curvature   e_acf1 e_acf10
+    ##       <dbl>    <dbl>           <dbl>  <dbl>    <dbl>     <dbl>     <dbl>    <dbl>   <dbl>
+    ## 1         1        0               1 0.0506 0.00101      0.354    0.212  -0.00211   0.180
+    ## 2         1        0               1 0.110  0.000668    -0.500    0.0679 -0.147     0.163
+    ## 3         1        0               1 0.201  0.000810    -2.18    -0.836  -0.341     0.429
+    ## 4         1        0               1 0.129  0.000511    -0.402   -1.57   -0.209     0.193
+    ## 5         1        0               1 0.134  0.000774    -0.817    1.39   -0.165     0.208
+    ## 6         1        0               1 0.0673 0.00106      0.130    0.681  -0.318     0.288
+    ## # ℹ 7 more variables: entropy <dbl>, x_acf1 <dbl>, x_acf10 <dbl>, diff1_acf1 <dbl>,
+    ## #   diff1_acf10 <dbl>, diff2_acf1 <dbl>, diff2_acf10 <dbl>
 
 It is easier to find a good set of basis vectors that highlight outliers
 when there are a lot more points compared to the dimensions of the
@@ -89,7 +82,7 @@ Next we input these time series features to *dobin*.
     colnames(coords) <- c("DC1", "DC2")
     ggplot(coords, aes(DC1, DC2)) + geom_point() + theme_bw()
 
-![](2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/dobin-1.png)
+![](/Users/kan092/Library/CloudStorage/OneDrive-CSIRO/Documents/repos/sevvandi.github.io/_posts/2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/dobin-1.png)
 In the first and second dobin component space (DC1-DC2 space), we see a
 point appearing far away near (15,−5). Let’s investigate this point.
 
@@ -122,7 +115,7 @@ window of the time series.
     colnames(df2) <- c("Index", "Value")
     ggplot(df2, aes(Index, Value)) + geom_point() + geom_line() + theme_bw()
 
-![](2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/analysis3-1.png)
+![](/Users/kan092/Library/CloudStorage/OneDrive-CSIRO/Documents/repos/sevvandi.github.io/_posts/2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/analysis3-1.png)
 We see that we’ve picked up the spike corresponding to position 1010, in
 the 21st window, because 1010/50 = 20.2.
 
@@ -141,7 +134,7 @@ River near Springfield, Ohio from 1915- 1960.
     autoplot(tt) +  ggtitle("Mad River near Springfield OH 1915- 1960") +
       xlab("Year") +  ylab("Streamflow")
 
-![](2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/realEx-1.png)
+![](/Users/kan092/Library/CloudStorage/OneDrive-CSIRO/Documents/repos/sevvandi.github.io/_posts/2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/realEx-1.png)
 
 Let’s split the time series into non-overlapping windows and compute
 features as before.
@@ -156,7 +149,7 @@ features as before.
     colnames(coords) <- c("DC1", "DC2")
     ggplot(coords, aes(DC1, DC2)) + geom_point(size=2) + theme_bw()
 
-![](2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/feat2-1.png)
+![](/Users/kan092/Library/CloudStorage/OneDrive-CSIRO/Documents/repos/sevvandi.github.io/_posts/2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/feat2-1.png)
 We see a point having a DC1 value greater than 1. Let us investigate
 that point.
 
@@ -169,7 +162,7 @@ that point.
     colnames(df) <- c("Index", "Streamflow")
     ggplot(df, aes(Index, Streamflow)) + geom_point() + geom_line()
 
-![](2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/dobin2-1.png)
+![](/Users/kan092/Library/CloudStorage/OneDrive-CSIRO/Documents/repos/sevvandi.github.io/_posts/2019-11-06-Dobin-for-time-series_files/figure-markdown_strict/dobin2-1.png)
 
 We see this point corresponds to the window with the highest spike in
 the time series, as this is the only spike greater than 75 units.

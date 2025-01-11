@@ -1,7 +1,7 @@
 ---
 title: Using dobin for time series data
 author: Sevvandi Kandanaarachchi
-date: '2019-11-16'
+date: '2025-01-11'
 slug: dobin-for-time-series
 categories: []
 tags: []
@@ -17,6 +17,8 @@ image:
 projects: []
 output: md_document
 ---
+This is a blogpost I did in Nov 2019. I'm posting it again on my new website. 
+
 The R package *dobin* can be used as a dimension reduction tool for outlier detection. So, if we have a dataset of $N$ independent observations,  where each observation is of dimension $p$, *dobin* can be used to find a new basis, such that the outliers of this dataset are highlighted using fewer basis vectors (see [here](https://sevvandi.github.io/dobin/index.html)). 
 
 But, how do we use *dobin* for time series data? *Dobin* is not meant for  raw time series data because it is time-dependent. But we can break a time series into consecutive non-overlapping windows and compute features of data in each window using an R package such as [*tsfeatures*](https://pkg.robjhyndman.com/tsfeatures/). If we compute $d$  features, then data in each time series window will be denoted by a point in $\mathbb{R}^d$. 
