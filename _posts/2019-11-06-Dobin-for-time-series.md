@@ -2,7 +2,7 @@
 title: Using dobin for time series data
 author: Sevvandi Kandanaarachchi
 date: '2025-01-11'
-permalink: /posts/2024/01/dobin-time-series/
+permalink: /posts/2025/01/dobin-time-series/
 tags:
   - R
   - analysis
