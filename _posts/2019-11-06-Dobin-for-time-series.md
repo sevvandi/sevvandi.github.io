@@ -9,7 +9,7 @@ tags:
 layout: post
 output: 
   html_document:
-    fig_path: "../_Rmd/"
+    fig_path: "/assets/images/posts/"
     self_contained: true
     keep_md: true
 ---
@@ -41,7 +41,7 @@ colnames(df) <- c("Index", "Value")
 ggplot(df, aes(Index, Value)) + geom_point() + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/setup-1.png)<!-- -->
+![](/assets/images/posts/2019-11-06-Dobin-for-time-series_files/figure-html/setup-1.png)<!-- -->
 
 Now, let us break the time series into non-overlapping chunks of length $50$, i.e. we get $120$ chunks or windows. Why do we use non-overlapping windows? If we use overlapping windows, say sliding by $1$, the outlying point in the time series contributes to $50$ windows. Later, when we compute features of these time series windows, these $50$ windows will have similar features, but they will not be anomalies in the feature space, because there are $50$ of them. That is why we use non-overlapping windows. 
 
@@ -125,7 +125,7 @@ colnames(df2) <- c("Index", "Value")
 ggplot(df2, aes(Index, Value)) + geom_point() + geom_line() + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/analysis3-1.png)<!-- -->
+![](/assets/images/posts/2019-11-06-Dobin-for-time-series_files/figure-html/analysis3-1.png)<!-- -->
 We see that we've picked up the spike corresponding to position $1010$, in the 21st window, because $1010/50 = 20.2$.
 
 
@@ -145,7 +145,7 @@ autoplot(tt) +  ggtitle("Mad River near Springfield OH 1915- 1960") +
   xlab("Year") +  ylab("Streamflow")
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/realEx-1.png)<!-- -->
+![](/assets/images/posts/2019-11-06-Dobin-for-time-series_files/figure-html/realEx-1.png)<!-- -->
 
 Let's split the time series into non-overlapping windows and compute features as before. 
 
@@ -161,7 +161,7 @@ colnames(coords) <- c("DC1", "DC2")
 ggplot(coords, aes(DC1, DC2)) + geom_point(size=2) + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/feat2-1.png)<!-- -->
+![](/assets/images/posts/2019-11-06-Dobin-for-time-series_files/figure-html/feat2-1.png)<!-- -->
 We see a point having a DC1 value greater than 1. Let us investigate that point. 
 
 
