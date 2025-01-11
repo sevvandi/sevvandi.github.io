@@ -6,12 +6,14 @@ permalink: /posts/2025/01/dobin-time-series/
 tags:
   - R
   - analysis
-layout: post
 output: 
   html_document:
-    fig_path: "../_Rmd/"
+    fig_path: "/assets/images/posts/"
     self_contained: true
     keep_md: true
+layout: single
+toc: true
+mathjax: true    
 ---
 
 This is a blogpost I did in Nov 2019 on dobin -  a method used for dimension reduction for anomaly detection. 
