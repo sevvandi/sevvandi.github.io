@@ -1,3 +1,12 @@
+---
+title: 'Using dobin for time series data'
+date: 2019-11-16
+tags: 
+  - anomaly detection
+  - time series 
+  - dimension reduction
+---
+
 The R package *dobin* can be used as a dimension reduction tool for
 outlier detection. So, if we have a dataset of *N* independent
 observations, where each observation is of dimension *p*, *dobin* can be
