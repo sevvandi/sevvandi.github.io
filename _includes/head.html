@@ -19,3 +19,23 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
+
+
+{% if page.usemathjax %}
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      packages: ['base', 'ams']
+    },
+    loader: {load: ['ui/menu', '[tex]/ams']},
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+{% endif %}

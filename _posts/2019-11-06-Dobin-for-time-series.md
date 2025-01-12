@@ -8,7 +8,7 @@ tags:
   - analysis
 output: 
   html_document:
-    fig_path: "/assets/images/posts/"
+    fig_path: "../assets/images/posts/"
     self_contained: true
     keep_md: true
 layout: single
@@ -27,7 +27,12 @@ Let's look at an example. We make a normally distributed time series of length $
 
 
 ```r
-knitr::opts_chunk$set()
+knitr::opts_chunk$set(
+  fig.path = "../assets/images/posts/",
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
 library(tsfeatures)
 library(dplyr)
 library(dobin)
@@ -84,7 +89,7 @@ colnames(coords) <- c("DC1", "DC2")
 ggplot(coords, aes(DC1, DC2)) + geom_point() + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/dobin-1.png)<!-- -->
+![](../assets/images/posts/dobin-1.png)<!-- -->
 In the first and second dobin component space (DC1-DC2 space), we see a point appearing far away near $(15, -5)$. Let's investigate this point.
 
 
@@ -127,7 +132,7 @@ colnames(df2) <- c("Index", "Value")
 ggplot(df2, aes(Index, Value)) + geom_point() + geom_line() + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/analysis3-1.png)<!-- -->
+![](../assets/images/posts/analysis3-1.png)<!-- -->
 We see that we've picked up the spike corresponding to position $1010$, in the 21st window, because $1010/50 = 20.2$.
 
 
@@ -147,7 +152,7 @@ autoplot(tt) +  ggtitle("Mad River near Springfield OH 1915- 1960") +
   xlab("Year") +  ylab("Streamflow")
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/realEx-1.png)<!-- -->
+![](../assets/images/posts/realEx-1.png)<!-- -->
 
 Let's split the time series into non-overlapping windows and compute features as before. 
 
@@ -163,7 +168,7 @@ colnames(coords) <- c("DC1", "DC2")
 ggplot(coords, aes(DC1, DC2)) + geom_point(size=2) + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/feat2-1.png)<!-- -->
+![](../assets/images/posts/feat2-1.png)<!-- -->
 We see a point having a DC1 value greater than 1. Let us investigate that point. 
 
 
@@ -183,7 +188,7 @@ colnames(df) <- c("Index", "Streamflow")
 ggplot(df, aes(Index, Streamflow)) + geom_point() + geom_line()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/dobin2-1.png)<!-- -->
+![](../assets/images/posts/dobin2-1.png)<!-- -->
 
 We see this point corresponds to the window with the highest spike in the time series, as this is the only spike greater than 75 units. 
 

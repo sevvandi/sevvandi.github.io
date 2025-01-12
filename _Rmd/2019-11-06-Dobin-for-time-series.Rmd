@@ -8,7 +8,7 @@ tags:
   - analysis
 output: 
   html_document:
-    fig_path: "/assets/images/posts/"
+    fig_path: "../assets/images/posts/"
     self_contained: true
     keep_md: true
 layout: single
@@ -26,7 +26,12 @@ But, how do we use *dobin* for time series data? *Dobin* is not meant for  raw t
 Let's look at an example. We make a normally distributed time series of length $6000$ and  insert an anomaly at the position $1010$.
 
 ```{r setup, message=FALSE}
-knitr::opts_chunk$set()
+knitr::opts_chunk$set(
+  fig.path = "../assets/images/posts/",
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
 library(tsfeatures)
 library(dplyr)
 library(dobin)
