@@ -1,23 +1,19 @@
 ---
 title: Using dobin for time series data
 author: Sevvandi Kandanaarachchi
-date: '2025-01-11'
-permalink: /posts/2025/01/dobin-time-series/
-tags:
-  - R
-  - analysis
+date: '2019-11-01'
 output: 
   html_document:
     fig_path: "/assets/images/posts/"
     self_contained: true
     keep_md: true
 layout: single
-toc: true
-mathjax: true    
 image:
   caption: ''
   focal_point: ''
   preview_only: yes
+toc: true
+mathjax: true     
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
