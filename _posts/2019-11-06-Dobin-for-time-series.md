@@ -15,6 +15,7 @@ layout: single
 toc: true
 mathjax: true    
 ---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 This is a blogpost I did in Nov 2019 on dobin -  a method used for dimension reduction for anomaly detection. 
 
