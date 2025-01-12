@@ -36,8 +36,6 @@ Again, there is no consensus on how to evaluate anomaly detection methods. This 
 
 5.  **Datasets, or the lack there of**. 
 
-I believe it is fair to say that until recently there were no benchmark datasets for anomaly detection or at least little was known about such datasets. In the recent past there has been some attempt to fill this gap and now there are some repositories of datasets specially prepared for anomaly detection.
+I believe it is fair to say that until recently there were no benchmark datasets for anomaly detection or at least little was known about such datasets. In the recent past there has been some attempt to fill this gap and now there are some repositories of datasets specially prepared for anomaly detection. Even now, most of the datasets that are available are downsampled classification datasets. Yes, we know the ground truth of these datasets, but samples of the 'other class' may not be real anomalies.
 
 
-
-  
