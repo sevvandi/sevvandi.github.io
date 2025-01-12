@@ -17,7 +17,7 @@
     keep_md: true
   -- In R set up
   knitr::opts_chunk$set(
-  fig.path = "../assets/images/posts/dobin_time_series/",  # Where to save files
+  fig.path = "../assets/images/posts/FOLDER_TO_SAVE_FILES/",  # Where to save files
   fig.cap = " ",
   fig.align = 'center'
   )

@@ -1,0 +1,270 @@
+---
+title: Anomaly Detection Ensembles
+author: Sevvandi Kandanaarachchi
+date: '2022-10-22'
+output: 
+  html_document:
+    fig_path: "/assets/images/posts/"
+    self_contained: true
+    keep_md: true
+layout: single
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+toc: true
+mathjax: true     
+---
+
+This is a post I did in Oct 2022 on using Item Response Theory to construct and anomaly detection ensemble.
+
+## What is an anomaly detection ensemble?
+
+It is a bunch of anomaly detection methods put together to get a final anomaly score/prediction. So you have a bunch of methods, and each of these methods have its own anomaly score, which is used by the ensemble to come up with the consensus score. 
+
+
+What are the ways of constructing an anomaly detection ensemble? Broadly, anomaly detection ensembles can be categorised into 3 camps.
+
+1. Feature bagging
+2. Subsampling
+3. Using combination functions
+
+
+## Feature bagging
+Feature bagging is a very popular ensemble technique in anomaly detection. Feature bagging uses different attribute subsets to find anomalies. In a dataset, generally observations are denoted by rows and attributes are denoted by columns. Feature bagging considers different column subsets. That is, multiple copies of the same dataset each having a slightly different set of columns is considered. For each dataset copy, we find anomalies using a single anomaly detection method.  Then the anomaly scores are averaged to compute the ensemble score. 
+
+Let us try this with the letter dataset from the [ODDS repository](http://odds.cs.stonybrook.edu/). We first read the dataset and normalize it so that each column has values within 0 and 1. Let's have a loot at the data after normalising.  
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.path = "../assets/images/posts/irt_ad_ensemble/",  # Where to save files
+  fig.cap = " ",
+  fig.align = 'center'
+)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gridExtra)
+library(here)
+library(R.matlab)
+
+
+# Unitize each column of X
+unitize <- function(X) {
+  for (col in 1:NCOL(X)) {
+    maxcol <- max(X[, col])
+    mincol <- min(X[, col])
+    if(maxcol!= mincol){
+      X[, col] <- (X[, col] - mincol) / (maxcol - mincol)
+    }
+  }
+  X
+}
+```
+
+```{r featurebagging1}
+datori <- readMat("letter.mat")
+Xori <- datori$X
+Xori <- unitize(Xori)
+head(Xori)
+```
+
+Now, feature bagging would select different column subsets. Let's pick different columns.
+
+
+
+```{r featurebagging2}
+set.seed(1)
+dd <- dim(Xori)[2]
+sample_list <- list()
+for(i in 1:10){
+  sample_list[[i]] <- sample(1:dd, 20)
+}
+sample_list[[1]]
+sample_list[[2]]
+```
+
+Next we select the subset of columns in each sample_list and find anomalies in each subsetted-dataset. Let's use the KNN_AGG anomaly detection method. This method aggregates the k-nearest neighbour distances. If a data point has high KNN distances compared to other points, then it is considered anomalous, because it is far away from other points. 
+
+```{r featurebaggin3}
+library(DDoutlier)
+knn_scores <- matrix(0, nrow = NROW(Xori), ncol = 10)
+for(i in 1:10){
+  knn_scores[ ,i] <- KNN_AGG(Xori[ ,sample_list[[i]]])
+}
+head(knn_scores)
+
+```
+
+Now we have the anomaly scores for the 10 subsetted-datasets. In feature bagging the general method of consensus is to add up the scores or take the mean of the scores, which is an equivalent thing to do. 
+
+```{r featurebagging4}
+bagged_score <- apply(knn_scores, 1, mean)
+```
+
+We can compare the bagged anomaly scores with the anomaly scores f we didn't use bagging. That is, if we used the full dataset, what would be anomaly scores? Does bagging make it better?  For this we need the labels/ground truth. To evaluate the performance, we use the area under the ROC curve.
+
+```{r featurebagging5}
+library(pROC)
+labels <- datori$y[ ,1]
+
+# anomaly scores without feature bagging - taking the full dataset
+knn_agg_without <- KNN_AGG(Xori)
+
+# ROC  - without bagging
+rocobj1 <- roc(labels, knn_agg_without, direction = "<")
+rocobj1$auc
+
+rocobj2 <- roc(labels, bagged_score, direction = "<")
+rocobj2$auc
+```
+Yes! We see that there is an increase in AUC (area under the ROC curve) by feature bagging. In this case it is a small improvement. But, nonetheless there is an improvement.
+
+
+## Subsampling
+Subsampling uses different subsets of observations to come up with anomaly scores. Instead of columns, here we use different subsets of observations. Then we average the anomaly scores to get an ensemble score. First, let's get the different observation samples.  For this, we will use non-anomalous observations because the anomalous observations are rare, we don't want to use all of them. 
+
+```{r subsampling1}
+set.seed(1)
+sample_matrix <- matrix(0, nrow = NROW(Xori), ncol = 10)
+inds0 <- which(labels == 0)
+nn1 <- sum(inds0)
+inds1 <- which(labels == 1)
+nn2 <- sum(inds1)
+sample_matrix[inds1, ] <- 1
+for(j in 1:10){
+  sam <- sample(inds0, 1400)
+  sample_matrix[sam, j] <- 1
+}
+head(sample_matrix)
+```
+
+Our sample_matrix contains 1 if that observation is going to be used and 0 if it doesn't. We are going to use 10 subsampling iterations.
+
+Now that we have our subsamples, let's use an anomaly detection method to get the anomaly scores.
+
+```{r subsampling2}
+anom_scores <- matrix(NA, nrow = NROW(Xori), ncol = 10)
+for(j in 1:10){
+  inds <- which(sample_matrix[ ,j] == 1)
+  Xsub <- Xori[inds, ]
+  anom_scores[inds,j] <- KNN_AGG(Xsub)
+}
+head(anom_scores)
+```
+
+We see there are NA values when that observation was not selected. Now we will get the mean anomaly score. But some observations did not got selected for certain iterations. We need to take that into account. 
+
+```{r subsampling3}
+rowsum <- apply(sample_matrix, 1, sum)
+subsampled_score <- apply(anom_scores, 1, function(x) sum(x, na.rm = TRUE))/rowsum
+head(subsampled_score)
+```
+
+Here, we have divided the sum of the anom_scores by the number of times each observation was selected. The ensemble score is subsampled_score.  Now we can see if the ensemble score is better than the original score. 
+
+```{r subsampling4}
+# ROC  - without bagging
+rocobj1 <- roc(labels, knn_agg_without, direction = "<")
+rocobj1$auc
+
+rocobj2 <- roc(labels, subsampled_score, direction = "<")
+rocobj2$auc
+
+```
+Oh dear! Not really for this example. But it doesn't go down by much, which is a relief. Sometimes the ensemble is not better than the original model.  But most of the time it is. That is why we use ensembles. 
+
+## Using combination functions
+For both the above examples we used the average as the combination function. That is, given a set of scores for each observation, we averaged them. But we can do different things. For example, we can get the maximum instead of the average. Or we can get the geometric mean which is multiplying all of the scores and getting the Nth root of them. As examples, let's try those two functions: the maximum and the geometric mean. Let's use knn_scores in the bagging example. 
+
+```{r combination1}
+
+max_score <- apply(knn_scores, 1, max)
+head(max_score)
+
+prod_score <-(apply(knn_scores, 1, prod))^(1/10)
+head(prod_score)
+```
+
+Let's see if this is better than taking the average (mean). 
+
+```{r combinations2}
+rocobj1 <- roc(labels, bagged_score, direction = "<")
+rocobj1$auc
+
+# ROC  - Max
+rocobj1 <- roc(labels, max_score, direction = "<")
+rocobj1$auc
+
+rocobj2 <- roc(labels, prod_score, direction = "<")
+rocobj2$auc
+
+
+```
+Well!  Taking the maximum improved it a bit, but taking the geometric mean reduced it a bit. Interesting! 
+
+
+But, combination functions are not generally used this way! In this example we used feature bagging anomaly scores and different combination functions. And we only used a single anomaly detection method all the time. Generally, combination functions are used when multiple anomaly detection methods are used. That way, it makes sense to weight  methods differently to get an ensemble score. 
+## Combination functions with multiple anomaly detection methods
+So far, we've only looked at one anomaly detection method. Let's take multiple anomaly detection methods from the DDoutlier package. 
+
+```{r combinations3}
+
+knn <- KNN_AGG(Xori)
+lof <- LOF(Xori)
+cof <- COF(Xori)
+inflo <- INFLO(Xori)
+kdeos <- KDEOS(Xori)
+ldfsscore <- LDF(Xori)
+ldf <- ldfsscore$LDE
+ldof <- LDOF(Xori)
+
+```
+
+Now we have tried 7 anomaly detection methods. Let's see different combination functions. 
+
+1. Mean
+2. Maximum
+3. Geometric Mean
+4. An IRT-based method
+
+The IRT-based method is discussed in detail in this [paper](https://www.sciencedirect.com/science/article/abs/pii/S0020025521012639). Basically, there is a fancier combination method which uses item response theory under the hood. 
+
+Let's try these methods and get ensemble scores. 
+
+
+```{r combinations4, message = FALSE}
+library(outlierensembles)
+
+anomaly_scores <- cbind.data.frame(knn, lof, cof, inflo, kdeos, ldf, ldof)
+mean_ensemble <- apply(anomaly_scores, 1, mean)
+max_ensemble <- apply(anomaly_scores, 1, max)
+geom_mean_ensemble <- (apply(anomaly_scores, 1, prod))^(1/7)
+irt_mod <- irt_ensemble(anomaly_scores)
+irt_ensemble <- irt_mod$scores
+
+```
+
+Let's evaluate the different ensembles. 
+
+```{r combinations5}
+
+rocobj1 <- roc(labels, mean_ensemble, direction = "<")
+rocobj1$auc
+
+# ROC  - Max
+rocobj1 <- roc(labels, max_ensemble, direction = "<")
+rocobj1$auc
+
+rocobj1 <- roc(labels, geom_mean_ensemble, direction = "<")
+rocobj1$auc
+
+rocobj1 <- roc(labels, irt_ensemble, direction = "<")
+rocobj1$auc
+
+
+```
+
+For this example, IRT ensemble performs best. The mean and the max ensembles perform similarly. The geometric mean ensemble performs very poorly. I just included the geometric mean as it is another function, but actually it is not used in anomaly detection ensembles. 
+
+As you see, there are different methods of ensembling. You can use feature bagging, subsampling or you can use a different combination function. And you can do more than one thing. You can do feature bagging and  use a different combination function. You can do bagging and subsampling together. A lot of options! 
