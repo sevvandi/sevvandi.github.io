@@ -7,14 +7,14 @@ tags:
   - R
   - analysis
 output: 
-  html_document:
-    fig_path: "../assets/images/posts/dobin_time_series/"
-    self_contained: true
-    keep_md: true
+  md_document:
+    variant: gfm
+    preserve_yaml: true
 layout: single
 toc: true
 mathjax: true    
 ---
+
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 This is a blogpost I did in Nov 2019 on dobin -  a method used for dimension reduction for anomaly detection. 
@@ -28,10 +28,12 @@ Let's look at an example. We make a normally distributed time series of length $
 
 ```{r setup, message=FALSE}
 knitr::opts_chunk$set(
-  fig.path = "../assets/images/posts/dobin_time_series/",
-  echo = TRUE,
-  warning = FALSE,
-  message = FALSE
+  fig.path = "../assets/images/posts/dobin_time_series/",  # Where files are saved
+  fig.cap = " "
+)
+# This will modify how the path appears in the markdown
+knitr::opts_knit$set(
+  base.url = "/assets/images/posts/dobin_time_series/"
 )
 library(tsfeatures)
 library(dplyr)
