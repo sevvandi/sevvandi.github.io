@@ -11,9 +11,9 @@
 
 <meta name="author" content="Sevvandi Kandanaarachchi" />
 
-<meta name="date" content="2020-07-19" />
+<meta name="date" content="2021-01-23" />
 
-<title>Anomaly detection dilemmas</title>
+<title>Anomaly detection data repositories</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,81 +350,63 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Anomaly detection dilemmas</h1>
+<h1 class="title toc-ignore">Anomaly detection data repositories</h1>
 <h4 class="author">Sevvandi Kandanaarachchi</h4>
-<h4 class="date">2020-07-19</h4>
+<h4 class="date">2021-01-23</h4>
 
 </div>
 
 
-<p>This is a blog post I did in July 2020 on challenges in anomaly
-detection.</p>
-<p>Finding anomalies/outliers in data is a task that is increasingly
-getting more attention mainly due to the variety of applications
-involved. Not that it is a new field of research. Rather,
-outlier/anomaly detection has been studied by statisticians and computer
-scientists for a long time. However, there are certain aspects which
-lack consensus.</p>
+<p>This is a post I did in Jan 2021 on anomaly detection data
+repositories.</p>
+<p>In this post we will look at data repositories available for anomaly
+detection. So, can you use a standard classification dataset for anomaly
+detection? You can if you <em>downsample</em> one class, preferably the
+minority class. You can label the downsampled observations as anomalies.
+If you’re comparing performance for multiple anomaly detection methods,
+then one downsampled dataset is not enough. It is better to evaluate
+methods on multiple such versions to account for random sampling. If
+you’re using anomaly detection methods that need numerical data, the
+categorical variables in your classification dataset has to be taken
+care of. Are you going to drop them or convert them to numerical data?
+In addition you need to take missing values into account. So, let us
+look at some repositories.</p>
 <ol style="list-style-type: decimal">
-<li><strong>What’s in a name?</strong></li>
+<li><p><a href="http://odds.cs.stonybrook.edu/">Outlier Detection
+Datasets - ODDS</a> This is a really good website that provides
+multi-dimensional point datasets, time series graph datasets for event
+detection, time series point datasets, adversarial attack and security
+datasets and crowd scene video datasets. They describe the datasets well
+and provide references. It is maintained by Shebuti Rayana.</p></li>
+<li><p><a href="https://figshare.com/articles/dataset/Datasets_12338_zip/7705127">Monash
+figshare outlier detection datasets</a> This repository has 12000 plus
+anomaly detection datasets that can be downloaded as a zip file. All
+these datasets are prepared using classification datasets from the UCI
+repostiory. This data repository was used in the paper <em>On
+normalization and algorithm selection for unsupervised outlier
+detection</em>.</p></li>
+<li><p><a href="https://elki-project.github.io/datasets/outlier">ELKI
+outlier detection datasets</a> This repository was used in the paper
+<em>On the Evaluation of Unsupervised Outlier Detection: Measures,
+Datasets, and an Empirical Study</em> by Campos et al. It contains over
+2000 datasets prepared for anomaly detection.</p></li>
+<li><p><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OPQMVF">Harvard
+dataverse anomaly detection datasets</a> This respository contains 10
+datasets prepared for anomaly detection. It was used in the paper <em>A
+comparative evaluation of unsupervised anomaly detection algorithms for
+multivariate data</em> by Goldstein and Uchida.</p></li>
+<li><p><a href="https://towardsdatascience.com/adrepository-anomaly-detection-datasets-with-real-anomalies-2ee218f76292">ADRepository
+- Anomaly Detection Datasets with Real Anomalies</a>This is a GitHub
+repository maintained by Guansong Pang. It contains 21 datasets. More
+details are available in the paper <em>Deep learning for anomaly
+detection: a review</em> by Pang et al. </p></li>
+<li><p><a href="https://ir.library.oregonstate.edu/concern/datasets/47429f155">Anomaly
+Detection Meta-Analysis Benchmarks</a> This repository was used in the
+paper <em>A Meta-Analysis of the Anomaly Detection Problem</em> by
+Emmott et al. </p></li>
 </ol>
-<p>The words outlier/anomaly/novelty/extremes are sometimes used to
-describe the same thing; sometimes for slightly different things. So,
-when we read a paper, we need to be careful what the word means, because
-it may not mean what we think it means.</p>
-<ol start="2" style="list-style-type: decimal">
-<li><strong>Lack of definitions</strong></li>
-</ol>
-<p>Antony Unwin in his paper <em>Multivariate outliers and the O3
-plot</em> says <em>“Outliers are a complicated business. It is difficult
-to define what they are, it is difficult to identify them, and it is
-difficult to assess how they affect analyses”.</em> Sometimes we find
-that the definition of an outlier depends on the application. For
-example, chromosomal anomalies in tumours may have very different
-distributional properties when compared with fraudulent credit card
-transactions among billions of legitimate transactions. This makes it
-difficult if not impossible for researchers to come up with algorithms
-that detect anomalies in all situations. Often, parameter selection
-plays a role. For example, if we are using an anomaly detection method
-based on knn distances, frequently we’re faced with the question “which
-k works best?”.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Identify outliers or give scores?</strong></li>
-</ol>
-<p>Researchers broadly detect outliers in two different ways. (1)
-Identify outliers, i.e. declare if a data point is an outlier. This is a
-binary declaration. (2) Give a score of outlyingness. With this method,
-each point in the dataset gets a score of outlyingness. Both ways have
-pros and cons. The binary identification of outliers does not tell you
-how outlying it is. With this technique we have no sense which point is
-the most outlying of the identified outliers. On the other hand, the
-scoring method does not tell you which points are actually outliers.
-That is left to the user. The user can define a threshold and say that
-points with outlying scores above that threshold are outliers. However,
-coming up with a meaningful threshold may not be an easy task.</p>
-<ol start="4" style="list-style-type: decimal">
-<li><strong>Evaluation methods</strong></li>
-</ol>
-<p>Again, there is no consensus on how to evaluate anomaly detection
-methods. This is not surprising given that outlier detection methods
-have two modes of operation: identify outliers or give scores. Methods
-that identify outliers evaluate the anomaly detection method by using
-metrics such as true positive rate, false positive rate, positive
-predictive power and negative predictive power. On the other hand,
-anomaly detection methods that give scores use area under the Receiver
-Operator Characteristic (ROC) curve, or area under the Precision Recall
-curve to evaluate effectiveness.</p>
-<ol start="5" style="list-style-type: decimal">
-<li><strong>Datasets, or the lack there of</strong>.</li>
-</ol>
-<p>I believe it is fair to say that until recently there were no
-benchmark datasets for anomaly detection or at least little was known
-about such datasets. In the recent past there has been some attempt to
-fill this gap and now there are some repositories of datasets specially
-prepared for anomaly detection. Even now, most of the datasets that are
-available are downsampled classification datasets. Yes, we know the
-ground truth of these datasets, but samples of the ‘other class’ may not
-be real anomalies.</p>
+<p>If I haven’t listed your anomaly detection data repository, do let me
+know and I will include it.</p>
 
 
 
