@@ -8,7 +8,7 @@ tags:
   - analysis
 output: 
   html_document:
-    fig_path: "../assets/images/posts/"
+    fig_path: "../assets/images/posts/dobin_time_series/"
     self_contained: true
     keep_md: true
 layout: single
@@ -27,7 +27,7 @@ Let's look at an example. We make a normally distributed time series of length $
 
 ```{r setup, message=FALSE}
 knitr::opts_chunk$set(
-  fig.path = "../assets/images/posts/",
+  fig.path = "../assets/images/posts/dobin_time_series/",
   echo = TRUE,
   warning = FALSE,
   message = FALSE
@@ -36,7 +36,9 @@ library(tsfeatures)
 library(dplyr)
 library(dobin)
 library(ggplot2)
+```
 
+```{r synthetic, message=FALSE}
 set.seed(1)
 # Generate 6000 random normally distributed points for a time series
 y <- rnorm(6000)

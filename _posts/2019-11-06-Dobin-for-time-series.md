@@ -8,7 +8,7 @@ tags:
   - analysis
 output: 
   html_document:
-    fig_path: "../assets/images/posts/"
+    fig_path: "../assets/images/posts/dobin_time_series/"
     self_contained: true
     keep_md: true
 layout: single
@@ -28,7 +28,7 @@ Let's look at an example. We make a normally distributed time series of length $
 
 ```r
 knitr::opts_chunk$set(
-  fig.path = "../assets/images/posts/",
+  fig.path = "../assets/images/posts/dobin_time_series/",
   echo = TRUE,
   warning = FALSE,
   message = FALSE
@@ -37,7 +37,10 @@ library(tsfeatures)
 library(dplyr)
 library(dobin)
 library(ggplot2)
+```
 
+
+```r
 set.seed(1)
 # Generate 6000 random normally distributed points for a time series
 y <- rnorm(6000)
@@ -48,7 +51,7 @@ colnames(df) <- c("Index", "Value")
 ggplot(df, aes(Index, Value)) + geom_point() + theme_bw()
 ```
 
-![](2019-11-06-Dobin-for-time-series_files/figure-html/setup-1.png)<!-- -->
+![](../assets/images/posts/dobin_time_series/synthetic-1.png)<!-- -->
 
 Now, let us break the time series into non-overlapping chunks of length $50$, i.e. we get $120$ chunks or windows. Why do we use non-overlapping windows? If we use overlapping windows, say sliding by $1$, the outlying point in the time series contributes to $50$ windows. Later, when we compute features of these time series windows, these $50$ windows will have similar features, but they will not be anomalies in the feature space, because there are $50$ of them. That is why we use non-overlapping windows. 
 
@@ -89,7 +92,7 @@ colnames(coords) <- c("DC1", "DC2")
 ggplot(coords, aes(DC1, DC2)) + geom_point() + theme_bw()
 ```
 
-![](../assets/images/posts/dobin-1.png)<!-- -->
+![](../assets/images/posts/dobin_time_series/dobin-1.png)<!-- -->
 In the first and second dobin component space (DC1-DC2 space), we see a point appearing far away near $(15, -5)$. Let's investigate this point.
 
 
@@ -132,7 +135,7 @@ colnames(df2) <- c("Index", "Value")
 ggplot(df2, aes(Index, Value)) + geom_point() + geom_line() + theme_bw()
 ```
 
-![](../assets/images/posts/analysis3-1.png)<!-- -->
+![](../assets/images/posts/dobin_time_series/analysis3-1.png)<!-- -->
 We see that we've picked up the spike corresponding to position $1010$, in the 21st window, because $1010/50 = 20.2$.
 
 
@@ -152,7 +155,7 @@ autoplot(tt) +  ggtitle("Mad River near Springfield OH 1915- 1960") +
   xlab("Year") +  ylab("Streamflow")
 ```
 
-![](../assets/images/posts/realEx-1.png)<!-- -->
+![](../assets/images/posts/dobin_time_series/realEx-1.png)<!-- -->
 
 Let's split the time series into non-overlapping windows and compute features as before. 
 
@@ -168,7 +171,7 @@ colnames(coords) <- c("DC1", "DC2")
 ggplot(coords, aes(DC1, DC2)) + geom_point(size=2) + theme_bw()
 ```
 
-![](../assets/images/posts/feat2-1.png)<!-- -->
+![](../assets/images/posts/dobin_time_series/feat2-1.png)<!-- -->
 We see a point having a DC1 value greater than 1. Let us investigate that point. 
 
 
@@ -188,7 +191,7 @@ colnames(df) <- c("Index", "Streamflow")
 ggplot(df, aes(Index, Streamflow)) + geom_point() + geom_line()
 ```
 
-![](../assets/images/posts/dobin2-1.png)<!-- -->
+![](../assets/images/posts/dobin_time_series/dobin2-1.png)<!-- -->
 
 We see this point corresponds to the window with the highest spike in the time series, as this is the only spike greater than 75 units. 
 
