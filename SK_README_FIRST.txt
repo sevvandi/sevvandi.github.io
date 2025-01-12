@@ -21,4 +21,16 @@
   fig.cap = " ",
   fig.align = 'center'
   )
+  -- After knitting, open the .md file and replace "../assets" with "/assets" in figures (VERY IMPORTANT)
   -- After knitting, move .md file to _posts folder *********** (VERY IMPORTANT)
+  
+4. How to add a talk
+  -- Go to _data folder (at the root)
+  -- Open talks.yml
+  -- Add the talk on top
+
+5. How to add a publication
+  -- Go to _publications folder (at the root)
+  -- Add a .md file for the publication
+  -- yaml on top followed by APA style citation
+  -- Update paper url 
