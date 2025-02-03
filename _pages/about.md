@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Senior Research Scientist at [CSIRO](https://people.csiro.au/K/S/sevvandi-kandanaarachchi), Australia's National Science Agency. I work on statistical machine learning research with a focus on scientific discovery. Before joining CSIRO, I was a lecturer at RMIT University (2020 - 2022), before that a postdoctoral researcher at the University of Melbourne (2020) and at Monash University (2016 - 2019). 
+I am a Senior Research Scientist at [CSIRO](https://www.csiro.au/en/research), Australia's National Science Agency. I work on statistical machine learning research with a focus on scientific discovery. Before joining CSIRO, I was a lecturer at RMIT University (2020 - 2022), before that a postdoctoral researcher at the University of Melbourne (2020) and at Monash University (2016 - 2019). 
 
 I completed my PhD in differential geometry and partial differential equations at Monash University in 2011, and, in 2015, completed a Graduate Certificate in data mining and applications from Stanford University.
 
