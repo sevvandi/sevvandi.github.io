@@ -14,7 +14,7 @@ I completed my PhD in differential geometry and partial differential equations a
 
 I do methodological and applied research in statistical machine learning. On the applied front, I've worked on a broad range of applications including security, space, remote sensing and environmental applications. In terms of methodology, I've worked in areas such as algorithm evaluation, robust anomaly detection and dynamic networks. 
 
-My research ethos is that applied and methodological research should go hand in hand. Often applications point to a research gap, driving the cog wheels of methodological research. We know the research problems of today cannot be solved with one hammer. We need a multitude of tools, with different disciplines coming together to to solve these complex problems. My research journey has made this abundantly clear to me.  
+My research ethos is that applied and methodological research should go hand in hand. Often applications point to a research gap, driving the cog wheels of methodological research. We know the research problems of today cannot be solved with one hammer. We need a multitude of tools, with different disciplines coming together to solve these complex problems. My research journey has made this abundantly clear to me.  
 
 
 
