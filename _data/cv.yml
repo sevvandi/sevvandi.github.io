@@ -40,25 +40,17 @@ positions:
     organization: "DigiPen Institute of Technology, Singapore"
     period: "Aug 2011 - Aug 2015"       
 
+awards:
+  - title: "Women of Colour in STEM Awards - Mathematics Mastery"
+    year: "2024"
+
+grants:
+  - title: "CSIRO R+ CERC Grant: Bias Anatomy - Disentangling Biases in Machine Learning Algorithms"
+    amount: "$360,000"
+    period: "2024, Lead Investigator"
 
 contributions:
   - position: "Treasurer"
     organization: "Women in Mathematics Special Interest Group, Australian Mathematical Society"
     link: "https://austms.org.au/research-group/wimsig/"
-    period: "Jan 2022-Dec 2024"
-
-
-awards:
-  - title: "Women of Colour in STEM Awards - Mathematics Mastery"
-    year: "2024"
-    description: ""
-
-
- 
-grants:
-  - title: "CSIRO R+ CERC Grant: Bias Anatomy - Disentangling Biases in Machine Learning Algorithms"
-    amount: "$360,000"
-    period: "2024"
-    description: "Lead Investigator"
-
- 
+    period: "Jan 2022-Dec 2024" 
