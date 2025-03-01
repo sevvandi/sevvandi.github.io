@@ -136,6 +136,7 @@ redirect_from:
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1em;
+    border: none;
   }
   
   .cv-header {
@@ -145,13 +146,26 @@ redirect_from:
   .cv-header th {
     padding: 10px;
     text-align: left;
-    border: 1px solid #a0a0a0;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .cv-header th:first-child {
+    border-right: 1px solid #a0a0a0;
   }
   
   .cv-left-column, .cv-right-column {
     vertical-align: top;
     padding: 15px;
-    border: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .cv-left-column {
+    border-right: 1px solid #a0a0a0;
   }
   
   .cv-table ul {
@@ -181,12 +195,14 @@ redirect_from:
       display: block;
       width: 100%;
       box-sizing: border-box;
+      border-right: none !important;
     }
     
     .cv-left-column, .cv-right-column {
       display: block;
       width: 100%;
       box-sizing: border-box;
+      border-right: none;
     }
   }
 </style>
