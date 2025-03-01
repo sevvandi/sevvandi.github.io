@@ -10,5 +10,5 @@ grants:
   - year: "2024"
     body: "CSIRO"
     amount: "$360,000"
-    description: "BiasAnatomy: Disentangling Algorithm Bias in ML"
+    description: "BiasAnatomy: Disentangling different biases in machine learning algorithms"
     
