@@ -1,23 +1,24 @@
 # _data/cv.yml
 
 qualifications:
-  - degree: "B.Sc.Eng. (Hons) in Computer Science and Engineering"
-    university: "University of Moratuwa"
-    year: "2002"
+  - degree: "Graduate Certificate in Data Mining and Applications"
+    university: "Stanford University"
+    year: "2015"
+    
+  - degree: "Ph.D."
+    university: "Monash University, Mathematical Sciences"
+    year: "2011"
+    thesis_topic: "Axially Symmetric Volume Preserving Mean Curvature Flow"
+    jointly_supervised: "Maria Athanassenas" 
     
   - degree: "Masters Preliminary in Mathematics"
     university: "Monash University"
     year: "2006"    
 
-  - degree: "Ph.D."
-    university: "Monash University, Mathematical Sciences"
-    year: "2011"
-    thesis_topic: "Axially Symmetric Volume Preserving Mean Curvature Flow"
-    jointly_supervised: "Maria Athanassenas"
-
-  - degree: "Graduate Certificate in Data Mining and Applications"
-    university: "Stanford University"
-    year: "2015"
+  - degree: "B.Sc.Eng. (Hons) in Computer Science and Engineering"
+    university: "University of Moratuwa"
+    year: "2002"    
+    
 
 positions:
   - title: "Senior Research Scientist"
