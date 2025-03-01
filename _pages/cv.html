@@ -8,95 +8,185 @@ redirect_from:
 ---
 {% include base_path %}
 
-<h1>Awards</h1>
-<div class="awards-container">
-  <div class="awards-header">
-    <div class="awards-year">Year</div>
-    <div class="awards-title">Award</div>
-  </div>
-  
-  {% for award in site.data.cv.awards %}
-  <div class="awards-row">
-    <div class="awards-year">{{ award.year }}</div>
-    <div class="awards-title">
-      {% if award.url %}
-        <a href="{{ award.url }}">{{ award.title }}</a>
-      {% else %}
-        {{ award.title }}
-      {% endif %}
-    </div>
-  </div>
-  {% endfor %}
+<div class="cv-section">
+  <table class="cv-table">
+    <tr class="cv-header">
+      <th>Qualifications</th>
+      <th>Positions</th>
+    </tr>
+    <tr>
+      <td class="cv-left-column">
+        <ul>
+          {% for qualification in site.data.cv.qualifications %}
+          <li>
+            <strong>{{ qualification.degree }}</strong>, {{ qualification.university }}, {{ qualification.year }}
+            {% if qualification.thesis_topic %}
+            <ul>
+              <li>Thesis topic: "{{ qualification.thesis_topic }}"</li>
+              {% if qualification.supervisor %}
+              <li>Supervised by {{ qualification.supervisor }}</li>
+              {% endif %}
+              {% if qualification.jointly_supervised %}
+              <li>Jointly supervised by {{ qualification.jointly_supervised }}</li>
+              {% endif %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+      <td class="cv-right-column">
+        <ul>
+          {% for position in site.data.cv.positions %}
+          <li>
+            <strong>{{ position.title }}</strong>, {{ position.organization }} 
+            {% if position.period %}({{ position.period }}){% endif %}
+            {% if position.roles %}
+            <ul>
+              {% for role in position.roles %}
+              <li>{{ role.title }} 
+                {% if role.period %}({{ role.period }}){% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
 </div>
 
-<h1>Grants</h1>
-<div class="grants-container">
-  <div class="grants-header">
-    <div class="grants-year">Year</div>
-    <div class="grants-body">Awarding Body</div>
-    <div class="grants-amount">Grant Amount</div>
-    <div class="grants-description">Description</div>
-  </div>
-  
-  {% for grant in site.data.cv.grants %}
-  <div class="grants-row">
-    <div class="grants-year">{{ grant.year }}</div>
-    <div class="grants-body">{{ grant.body }}</div>
-    <div class="grants-amount">{{ grant.amount }}</div>
-    <div class="grants-description">{{ grant.description }}</div>
-  </div>
-  {% endfor %}
+<div class="cv-section">
+  <table class="cv-table">
+    <tr class="cv-header">
+      <th>Selected Community Contributions</th>
+      <th>Awards</th>
+    </tr>
+    <tr>
+      <td class="cv-left-column">
+        <ul>
+          {% for contribution in site.data.cv.contributions %}
+          <li>
+            {% if contribution.position %}{{ contribution.position }}, {% endif %}
+            {% if contribution.link %}
+            <a href="{{ contribution.link }}">{{ contribution.organization }}</a>
+            {% else %}
+            {{ contribution.organization }}
+            {% endif %}
+            {% if contribution.period %}({{ contribution.period }}){% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+      <td class="cv-right-column">
+        <ul>
+          {% for award in site.data.cv.awards %}
+          <li>
+            {{ award.title }} ({{ award.year }})
+            {% if award.description %}
+            <ul>
+              {% if award.description %}
+              <li>{{ award.description }}</li>
+              {% endif %}
+              {% if award.details_link %}
+              <li><a href="{{ award.details_link }}">details</a></li>
+              {% endif %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="cv-section">
+  <table class="cv-table">
+    <tr class="cv-header">
+      <th colspan="2">Grants</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <ul>
+          {% for grant in site.data.cv.grants %}
+          <li>
+            {{ grant.title }}, {{ grant.amount }}, {{ grant.period }}
+            {% if grant.description %}
+            <ul>
+              <li>{{ grant.description }}</li>
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
 </div>
 
 <style>
-  .awards-container, .grants-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  .cv-section {
     margin-bottom: 2em;
   }
   
-  .awards-header, .grants-header, .awards-row, .grants-row {
-    display: flex;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+  .cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
   }
   
-  .awards-header, .grants-header {
-    font-weight: bold;
-    border-bottom: 2px solid #333;
+  .cv-header {
+    background-color: #b8c5d6;
   }
   
-  .awards-year, .grants-year {
-    flex: 0 0 100px;
+  .cv-header th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #a0a0a0;
   }
   
-  .awards-title {
-    flex: 1;
+  .cv-left-column, .cv-right-column {
+    vertical-align: top;
+    padding: 15px;
+    border: 1px solid #a0a0a0;
   }
   
-  .grants-body {
-    flex: 1;
+  .cv-table ul {
+    margin: 0;
+    padding-left: 20px;
   }
   
-  .grants-amount {
-    flex: 0 0 150px;
+  .cv-table ul li {
+    margin-bottom: 0.5em;
   }
   
-  .grants-description {
-    flex: 1;
+  .cv-table ul li ul {
+    margin-top: 0.3em;
   }
   
-  @media (max-width: 768px) {
-    .awards-header, .grants-header, .awards-row, .grants-row {
-      flex-direction: column;
-      padding: 12px 0;
+  .cv-table ul li ul li {
+    margin-bottom: 0.2em;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cv-table, .cv-header, .cv-left-column, .cv-right-column {
+      display: block;
+      width: 100%;
     }
     
-    .awards-year, .awards-title,
-    .grants-year, .grants-body, .grants-amount, .grants-description {
-      flex: 1;
-      padding: 4px 0;
+    .cv-header th {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .cv-left-column, .cv-right-column {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 </style>

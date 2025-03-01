@@ -1,14 +1,48 @@
 # _data/cv.yml
 
-awards:
-  - year: "2024"
-    title: "WOC STEM Awards - Mathematical Mastery"
-    url: "https://stemsisters.org.au/women-of-colour-in-stem-awards-2024/"
-  
-
-grants:
-  - year: "2024"
-    body: "CSIRO"
-    amount: "$360,000"
-    description: "BiasAnatomy: Disentangling different biases in machine learning algorithms"
+qualifications:
+  - degree: "B.Sc.Eng. (Hons) in Computer Science and Engineering"
+    university: "University of Moratuwa"
+    year: "2002"
     
+  - degree: "Masters Preliminary in Mathematics"
+    university: "Monash University"
+    year: "2006"    
+
+  - degree: "Ph.D."
+    university: "Monash University, Mathematical Sciences"
+    year: "2011"
+    thesis_topic: "Axially Symmetric Volume Preserving Mean Curvature Flow"
+    jointly_supervised: "Maria Athanassenas and Robert Bartnik"
+
+  - degree: "Graduate Certificate in Data Mining and Applications"
+    university: "Stanford University"
+    year: "2015"
+
+positions:
+  - title: "Senior Research Scientist"
+    organization: "CSIRO"
+    period: "July 2022 - "
+
+
+contributions:
+  - position: "Treasurer"
+    organization: "Women in Mathematics Special Interest Group, Australian Mathematical Society"
+    link: "https://austms.org.au/research-group/wimsig/"
+    period: "Jan 2022-Dec 2024"
+
+
+awards:
+  - title: "Women of Colour in STEM Awards - Mathematics Mastery"
+    year: "2024"
+    description: ""
+
+
+ 
+grants:
+  - title: "CSIRO R+ CERC Grant: Bias Anatomy - Disentangling Biases in Machine Learning Algorithms"
+    amount: "$360,000"
+    period: "2024"
+    description: ""
+
+ 
