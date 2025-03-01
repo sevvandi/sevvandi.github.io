@@ -61,26 +61,11 @@ redirect_from:
 <div class="cv-section">
   <table class="cv-table">
     <tr class="cv-header">
-      <th>Selected Community Contributions</th>
       <th>Awards</th>
+      <th>Grants</th>
     </tr>
     <tr>
       <td class="cv-left-column">
-        <ul>
-          {% for contribution in site.data.cv.contributions %}
-          <li>
-            {% if contribution.position %}{{ contribution.position }}, {% endif %}
-            {% if contribution.link %}
-            <a href="{{ contribution.link }}">{{ contribution.organization }}</a>
-            {% else %}
-            {{ contribution.organization }}
-            {% endif %}
-            {% if contribution.period %}({{ contribution.period }}){% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </td>
-      <td class="cv-right-column">
         <ul>
           {% for award in site.data.cv.awards %}
           <li>
@@ -99,17 +84,7 @@ redirect_from:
           {% endfor %}
         </ul>
       </td>
-    </tr>
-  </table>
-</div>
-
-<div class="cv-section">
-  <table class="cv-table">
-    <tr class="cv-header">
-      <th colspan="2">Grants</th>
-    </tr>
-    <tr>
-      <td colspan="2">
+      <td class="cv-right-column">
         <ul>
           {% for grant in site.data.cv.grants %}
           <li>
@@ -127,6 +102,31 @@ redirect_from:
   </table>
 </div>
 
+<div class="cv-section">
+  <table class="cv-table">
+    <tr class="cv-header">
+      <th colspan="2">Selected Community Contributions</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <ul>
+          {% for contribution in site.data.cv.contributions %}
+          <li>
+            {% if contribution.position %}{{ contribution.position }}, {% endif %}
+            {% if contribution.link %}
+            <a href="{{ contribution.link }}">{{ contribution.organization }}</a>
+            {% else %}
+            {{ contribution.organization }}
+            {% endif %}
+            {% if contribution.period %}({{ contribution.period }}){% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
 <style>
   .cv-section {
     margin-bottom: 2em;
@@ -136,73 +136,3 @@ redirect_from:
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1em;
-    border: none;
-  }
-  
-  .cv-header {
-    background-color: #b8c5d6;
-  }
-  
-  .cv-header th {
-    padding: 10px;
-    text-align: left;
-    border-top: 1px solid #a0a0a0;
-    border-bottom: 1px solid #a0a0a0;
-    border-left: none;
-    border-right: none;
-  }
-  
-  .cv-header th:first-child {
-    border-right: 1px solid #a0a0a0;
-  }
-  
-  .cv-left-column, .cv-right-column {
-    vertical-align: top;
-    padding: 15px;
-    border-bottom: 1px solid #a0a0a0;
-    border-left: none;
-    border-right: none;
-  }
-  
-  .cv-left-column {
-    border-right: 1px solid #a0a0a0;
-  }
-  
-  .cv-table ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-  
-  .cv-table ul li {
-    margin-bottom: 0.5em;
-  }
-  
-  .cv-table ul li ul {
-    margin-top: 0.3em;
-  }
-  
-  .cv-table ul li ul li {
-    margin-bottom: 0.2em;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .cv-table, .cv-header, .cv-left-column, .cv-right-column {
-      display: block;
-      width: 100%;
-    }
-    
-    .cv-header th {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      border-right: none !important;
-    }
-    
-    .cv-left-column, .cv-right-column {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      border-right: none;
-    }
-  }
-</style>
