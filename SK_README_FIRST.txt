@@ -1,4 +1,10 @@
-1. _pages: Contain files such as podcasts.html, teaching.html, software.html and publication.html 
+1. _pages: Contain files such as 
+  -- podcasts.html 
+  -- teaching.html 
+  -- software.html
+  -- publication.html 
+  -- about.md has the blurb about me. 
+  -- All this is in _pages.
 
 2. _data: Contains content
   -- software.yml

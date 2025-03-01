@@ -1,0 +1,15 @@
+# _data/cv.yml
+
+awards:
+  - year: "2024"
+    title: "WOC STEM Awards - Mathematical Mastery"
+    venue: ""
+    url: "https://stemsisters.org.au/woc-awards-2024/"
+  
+
+grants:
+  - year: "2024"
+    body: "CSIRO"
+    amount: "$360,000"
+    description: "BiasAnatomy: Disentangling Algorithm Bias in ML"
+    

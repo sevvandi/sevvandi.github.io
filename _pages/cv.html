@@ -1,0 +1,108 @@
+---
+layout: archive
+title: "CV"
+permalink: /cv/
+author_profile: true
+redirect_from:
+  - /resume
+---
+{% include base_path %}
+
+<h1>Awards</h1>
+<div class="awards-container">
+  <div class="awards-header">
+    <div class="awards-year">Year</div>
+    <div class="awards-title">Award</div>
+    <div class="awards-venue">Venue</div>
+  </div>
+  
+  {% for award in site.data.cv.awards %}
+  <div class="awards-row">
+    <div class="awards-year">{{ award.year }}</div>
+    <div class="awards-title">
+      {% if award.url %}
+        <a href="{{ award.url }}">{{ award.title }}</a>
+      {% else %}
+        {{ award.title }}
+      {% endif %}
+    </div>
+    <div class="awards-venue">{{ award.venue }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+<h1>Grants</h1>
+<div class="grants-container">
+  <div class="grants-header">
+    <div class="grants-year">Year</div>
+    <div class="grants-body">Awarding Body</div>
+    <div class="grants-amount">Grant Amount</div>
+    <div class="grants-description">Description</div>
+  </div>
+  
+  {% for grant in site.data.cv.grants %}
+  <div class="grants-row">
+    <div class="grants-year">{{ grant.year }}</div>
+    <div class="grants-body">{{ grant.body }}</div>
+    <div class="grants-amount">{{ grant.amount }}</div>
+    <div class="grants-description">{{ grant.description }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .awards-container, .grants-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  
+  .awards-header, .grants-header, .awards-row, .grants-row {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .awards-header, .grants-header {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+  }
+  
+  .awards-year, .grants-year {
+    flex: 0 0 100px;
+  }
+  
+  .awards-title {
+    flex: 1;
+  }
+  
+  .awards-venue {
+    flex: 1;
+  }
+  
+  .grants-body {
+    flex: 1;
+  }
+  
+  .grants-amount {
+    flex: 0 0 150px;
+  }
+  
+  .grants-description {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .awards-header, .grants-header, .awards-row, .grants-row {
+      flex-direction: column;
+      padding: 12px 0;
+    }
+    
+    .awards-year, .awards-title, .awards-venue,
+    .grants-year, .grants-body, .grants-amount, .grants-description {
+      flex: 1;
+      padding: 4px 0;
+    }
+  }
+</style>
