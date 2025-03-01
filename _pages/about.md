@@ -15,7 +15,6 @@ I do methodological and applied research in statistical machine learning. On the
 
 My research ethos is that applied and methodological research should go hand in hand and strive for a harmonious balance. Often applications point to a research gap, driving the cog wheels of methodological research. Over the years, machine learning has become broader with deepening intersections with other disciplines, especially with mathematics. I am interested in many branches of applied mathematics that have these intersections.
 
-# We know the research problems of today cannot be solved with one hammer. We need a multitude of tools, with different disciplines coming together to solve these complex problems. My research journey has made this abundantly clear to me.  
 
 
 
