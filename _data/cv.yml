@@ -13,7 +13,7 @@ qualifications:
     university: "Monash University, Mathematical Sciences"
     year: "2011"
     thesis_topic: "Axially Symmetric Volume Preserving Mean Curvature Flow"
-    jointly_supervised: "Maria Athanassenas and Robert Bartnik"
+    jointly_supervised: "Maria Athanassenas"
 
   - degree: "Graduate Certificate in Data Mining and Applications"
     university: "Stanford University"
@@ -23,6 +23,22 @@ positions:
   - title: "Senior Research Scientist"
     organization: "CSIRO"
     period: "July 2022 - "
+
+  - title: "Lecturer"
+    organization: "RMIT University"
+    period: "Feb 2020 - June 2022"
+
+  - title: "Research Fellow"
+    organization: "University of Melbourne"
+    period: "Jan 2020 - Feb 2020"     
+
+  - title: "Research Fellow"
+    organization: "Monash University"
+    period: "Jan 2016 - Dec 2019"         
+    
+  - title: "Assistant Professor"
+    organization: "DigiPen Institute of Technology, Singapore"
+    period: "Aug 2011 - Aug 2015"       
 
 
 contributions:
@@ -35,6 +51,7 @@ contributions:
 awards:
   - title: "Women of Colour in STEM Awards - Mathematics Mastery"
     year: "2024"
+    link: "https://austms.org.au/research-group/wimsig/"
     description: ""
 
 
