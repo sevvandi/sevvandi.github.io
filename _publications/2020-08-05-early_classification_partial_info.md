@@ -1,5 +1,5 @@
 ---
-title: Early classification of spatio-temporal events using partial information
+title: 'Early classification of spatio-temporal events using partial information'
 year: '2020'
 venue: 'PLoS ONE'
 authors: 'Sevvandi Kandanaarachchi and Rob J. Hyndman, and Kate Smith-Miles'

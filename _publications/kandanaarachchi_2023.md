@@ -1,5 +1,5 @@
 ---
-title: Comprehensive algorithm portfolio evaluation using item response theory
+title: 'Comprehensive algorithm portfolio evaluation using item response theory'
 year: '2023'
 venue: 'Journal of Machine Learning Research'
 authors: 'Sevvandi Kandanaarachchi and Kate Smith-Miles'

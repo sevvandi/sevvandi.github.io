@@ -1,5 +1,5 @@
 ---
-title: Graphon mixtures
+title: 'Graphon mixtures'
 year: '2025'
 venue: 'Preprint'
 authors: 'Sevvandi Kandanaarachchi and Cheng Soon Ong'
