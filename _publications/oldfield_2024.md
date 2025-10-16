@@ -2,6 +2,6 @@
 title: An Item Response Theory-based R Module for Algorithm Portfolio Analysis
 year: '2025'
 venue: SoftwareX
-paperurl: 'https://arxiv.org/abs/2408.14025'
+authors: 'Brodie Oldfield, Sevvandi Kandanaarachchi Ziqi Xu and Mario Andrés Muñoz'
+paperurl: 'https://www.sciencedirect.com/science/article/pii/S2352711025002067'
 ---
-Oldfield, B., Kandanaarachchi, S., Xu, Z., & Muñoz, M. A. (2025). An Item Response Theory-based R module for Algorithm Portfolio Analysis. SoftwareX, 31, 102239.
