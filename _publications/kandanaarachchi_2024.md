@@ -1,8 +1,7 @@
 ---
-title: Predicting the structure of dynamic graphs
-year: '2024'
-venue: arXiv preprint arXiv:2401.04280
-paperurl: 'https://arxiv.org/abs/2401.04280'
+title: Predicting Graph Structure via Adapted Flux Balance Analysis
+year: '2025'
+venue: arXiv preprint arXiv:2507.05806
+paperurl: 'https://arxiv.org/abs/2507.05806'
 ---
-Kandanaarachchi, Sevvandi and Xu, Ziqi and Westerlund, Stefan (2024). Predicting the structure of dynamic graphs. arXiv preprint arXiv:2401.04280.
-
+Kandanaarachchi, S., Xu, Z., Westerlund, S., & Sanderson, C. (2025). Predicting Graph Structure via Adapted Flux Balance Analysis. arXiv preprint arXiv:2507.05806.

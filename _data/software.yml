@@ -7,7 +7,7 @@ shiny:
 packages:
   - logo: "graphonmix.png"  # store in assets/images/
     name: "graphonmix:"
-    description: "Generate (U,W)-mixture graphsas described in Kandanaarachchi & Ong (2025)"
+    description: "Generate (U,W)-mixture graphs as described in Kandanaarachchi & Ong (2025)"
     github: "https://sevvandi.github.io/graphonmix/"
     cran: "https://cran.r-project.org/web/packages/graphonmix/"
   - logo: "airt.png"  # store in assets/images/
