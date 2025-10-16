@@ -1,7 +1,7 @@
 ---
-title: " "
+title: "Fairness evaluation with Item Response Theory"
 year: 2025
-venue: "WWW Conference"
-paperurl: "https://arxiv.org/abs/2411.02414"
+venue: "In Proceedings of the ACM on Web Conference (WWW 25)"
+authors: 'Ziqi Xu, Sevvandi Kandanaarachchi, Cheng Soon Ong, Eirini Ntoutsi'
+paperurl: "https://dl.acm.org/doi/10.1145/3696410.3714883"
 ---
-Xu, Ziqi, Kandanaarachchi, Sevvandi, Ong, Cheng Soon, & Ntoutsi, Erini (2025). Fairness Evaluation with Item Response Theory. WWW Conference. Accepted.
