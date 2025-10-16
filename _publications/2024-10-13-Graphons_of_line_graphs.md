@@ -1,7 +1,8 @@
 ---
-title: " "
+title: "Graphons of Line Graphs"
 year: 2024
-venue: " "
+venue: "Preprint"
+authors: 'Sevvandi Kandanaarachchi and Cheng Soon Ong'
 paperurl: 'https://arxiv.org/abs/2409.01656'
 ---
-Kandanaarachchi, Sevvandi, & Ong, Cheng Soon (2024). Graphons of Line Graphs. arXiv preprint arXiv:2409.01656.
+ 
