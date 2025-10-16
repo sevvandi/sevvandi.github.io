@@ -1,4 +1,12 @@
 talks:
+  - date: "Sept 2025"
+    title: "From Dense to Sparse: Graphon Mixing for Graph Generation"
+    url: "https://www.slideshare.net/slideshow/from-dense-to-sparse-graphon-mixing-for-graph-generation/283820919"
+    venue: "OPTIMA Seminar, University of Melbourne"
+  - date: "Sept 2025"
+    title: "Two graphons are better than one! Graph generation with graphon mixtures"
+    url: "https://www.slideshare.net/slideshow/two-graphons-are-better-than-one-graph-generation-with-graphon-mixtures/283820882"
+    venue: "Applied Probability Seminar, University of Melbourne"
   - date: "Nov 2024"
     title: "Extreme value modelling of feature residuals for anomaly detection in dynamic graphs"
     url: "https://www.slideshare.net/slideshow/extreme-value-modelling-of-feature-residuals-for-anomaly-detection-in-dynamic-graphs/274232195"
