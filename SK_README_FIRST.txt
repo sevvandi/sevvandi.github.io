@@ -37,6 +37,5 @@
 
 5. How to add a publication
   -- Go to _publications folder (at the root)
-  -- Add a .md file for the publication
-  -- yaml on top followed by APA style citation
-  -- Update paper url 
+  -- Add a .md file for each publication
+
