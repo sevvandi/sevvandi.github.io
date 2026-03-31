@@ -1,5 +1,9 @@
 talks:
   - date: "Mar 2026"
+    title: "Enhancing cyber defence effectiveness: reducing false positives in inner-LAN threat detection"
+    url: "https://www.slideshare.net/slideshow/enhancing-cyber-defence-effectiveness-reducing-false-positives-in-inner-lan-threat-detection/286760224"
+    venue: "Deakin Defence Conference, Deakin Downtown"
+  - date: "Mar 2026"
     title: "Graphons for graph generation"
     url: "https://www.slideshare.net/slideshow/graphons-for-graph-generation-seminar-at-macsys/286728421"
     venue: "MACSYS Seminar Series University of Melbourne"
