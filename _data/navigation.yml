@@ -6,7 +6,7 @@
 
 main:
   - title: "My Research"
-    url: /my-research/
+    url: /my-research/graphons/
     
   - title: "Publications"
     url: /publications/
