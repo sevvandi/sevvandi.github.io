@@ -5,6 +5,9 @@
 # prevent it from being included in the site.
 
 main:
+  - title: "My Research"
+    url: /my-research/
+    
   - title: "Publications"
     url: /publications/
 
@@ -31,3 +34,15 @@ main:
     
   # - title: "Guide"
   #   url: /markdown/
+  
+  
+research:
+  - title: "My Research"
+  - title: "Graphons"
+    url: /my-research/graphons/
+  - title: "Item Response Theory"
+    url: /my-research/IRT/
+  - title: "Anomaly Detection"
+    url: /my-research/anomaly/
+  - title: "Others"
+    url: /my-research/others/

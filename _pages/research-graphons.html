@@ -1,0 +1,67 @@
+---
+layout: single
+title: "Graphons"
+permalink: /my-research/graphons/
+author_profile: false
+sidebar:
+  nav: "research"
+---
+
+<h2>Graphons</h2>
+
+<p>
+  Graphons are graph limits. Graphons can be used as a generative model for dense graphs. 
+  Description of your anomaly detection research. What problem does it solve,
+  what is your approach, and what is the impact.
+</p>
+
+<figure style="float: right; margin: 0 0 1em 2em; width: 320px;">
+  <img src="/images/research/anomaly.png" alt="Anomaly Detection" style="width:100%; border-radius:6px;">
+  <figcaption style="font-size:0.85em; text-align:center;">Caption for your figure.</figcaption>
+</figure>
+
+<h3>Key Contributions</h3>
+<ul>
+  <li>Contribution one</li>
+  <li>Contribution two</li>
+</ul>
+
+<h3>Selected Publications</h3>
+<ul>
+  <li>
+    <a href="/publications/paper-slug/">Paper Title</a>,
+    <em>Journal Name</em>, 2023.
+  </li>
+  <li>
+    <a href="/publications/paper-slug-2/">Another Paper</a>,
+    <em>Conference Name</em>, 2022.
+  </li>
+</ul>
+
+<h3>Software</h3>
+<p>
+  <a href="https://github.com/sevvandi/packagename">packagename</a> — 
+  short description of what it does.
+  Also on <a href="https://cran.r-project.org/package=packagename">CRAN</a>.
+</p>
+```
+
+Repeat this pattern for each topic — `_pages/research-timeseries.html`, `_pages/research-ml.html`, etc., each with `sidebar: nav: "research"` in the front matter.
+
+## 4. File structure overview
+```
+_pages/
+  my-research.html              # landing page
+  research-anomaly.html         # topic pages
+  research-timeseries.html
+  research-ml.html
+  research-networks.html
+
+_data/
+  navigation.yml                # defines both main nav and research sidebar
+
+images/
+  research/
+    anomaly.png
+    timeseries.png
+    ml.png
