@@ -37,7 +37,6 @@ main:
   
   
 research:
-  - title: "My Research"
   - title: "Graphons"
     url: /my-research/graphons/
   - title: "Item Response Theory"
