@@ -1,0 +1,31 @@
+---
+layout: single
+title: "Graphons"
+permalink: /my-research/graphons/
+author_profile: false
+sidebar:
+  nav: "research"
+---
+
+<p>
+  Graphons are graph limits. They can be used as a generative model for dense graphs. A graphon is a symmetric, measureable function defined as $W:[0.1]^2 \to [0,1]$.  However, graphons can only generate dense graphs. This set of papers extend graphons to generate sparse graphs. 
+</p>
+
+
+<h3>Graphons of line graphs</h3>
+
+Sevvandi Kandanaarachchi, Cheng Soon Ong<br>
+
+<a href="https://arxiv.org/abs/2409.01656"> Graphons of line graphs </a><br>
+
+This paper shows that for a subset of sparse graphs, their line graphs are dense. As such,  modeling the graphon of line graphs is useful for a subset of sparse graphs. <br>
+
+<figure style="float: right; margin: 0 0 1em 2em; width: 320px;">
+  <img src="/images/research/linegraph_graphon.png" alt="Graphons of line graphs" style="width:100%; border-radius:6px;">
+    <figcaption style="font-size:0.85em; text-align:center;">Top row: Graphs of 1 to 4 disjoint stars. Recall the graphon𝑊 = 0 for star graphs.
+Middle row: Line graphs of disjoint stars in top row. Line graphs of star graphs
+are complete graphs. Bottom row: The graphons of the line graphs of the star
+graphs (taken as sequences) shown on top.</figcaption>
+</figure>
+
+How do we understand the large graphs that are too sparse for classical tools to handle? This paper tackles that question by introducing a surprising transformation: rather than analysing the graphs directly, we map them to their *line graphs* —- where edges become nodes —- and then estimate the graphon. The key insight is that certain sparse graphs, those satisfying a certain property, which we call the "square-degree property", produce dense line graphs, making the standard graphon estimation techniques suddenly applicable. Star graphs are a clean example: they are sparse, yet their line graphs are dense cliques, yielding meaningful, non-zero graphons that can distinguish between. For example, networks with different numbers of star-shaped hubs, all collapse to the trivial zero graphon when working with the original graphs. But when we model as line graphs they become dense. The method also extends to superlinear preferential attachment graphs, a common model for real-world growing graphs. The work opens a new pathway for analysing a class of sparse graphs using the rich theory of dense graph limits.
