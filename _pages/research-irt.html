@@ -18,9 +18,9 @@ Authors: Sevvandi Kandanaarachchi, Cheng Soon Ong<br>
 
 <a href="https://arxiv.org/abs/2409.01656"> Graphons of line graphs </a><br>
 
-This paper shows that for a subset of sparse graphs, their line graphs are dense. As such,  modeling the graphon of line graphs is useful for a subset of sparse graphs. <br><br>
+TLDR: This paper shows that for a subset of sparse graphs, their line graphs are dense. As such,  modeling the graphon of line graphs is useful for a subset of sparse graphs. <br><br>
 
-<figure style="float: right; margin: 0 0 1em 2em; width: 320px;">
+<figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
   <img src="/images/research/linegraph_graphon.png" alt="Graphons of line graphs" style="width:100%; border-radius:6px;">
     <figcaption style="font-size:0.85em; text-align:center;">Top row: Graphs of 1 to 4 disjoint stars. Recall the graphon𝑊 = 0 for star graphs.
 Middle row: Line graphs of disjoint stars in top row. Line graphs of star graphs
@@ -29,3 +29,19 @@ graphs (taken as sequences) shown on top.</figcaption>
 </figure>
 
 How do we understand the large graphs that are too sparse for classical tools to handle? This paper tackles that question by introducing a surprising transformation: rather than analysing the graphs directly, we map them to their *line graphs* —- where edges become nodes —- and then estimate the graphon. The key insight is that certain sparse graphs, those satisfying a certain property, which we call the "square-degree property", produce dense line graphs, making the standard graphon estimation techniques suddenly applicable. Star graphs are a clean example: they are sparse, yet their line graphs are dense cliques, yielding meaningful, non-zero graphons that can distinguish between. For example, networks with different numbers of star-shaped hubs, all collapse to the trivial zero graphon when working with the original graphs. But when we model as line graphs they become dense. The method also extends to superlinear preferential attachment graphs, a common model for real-world growing graphs. The work opens a new pathway for analysing a class of sparse graphs using the rich theory of dense graph limits.
+
+
+<h3>Graphon Mixtures</h3>
+
+Authors: Sevvandi Kandanaarachchi, Cheng Soon Ong<br>
+<a href="https://arxiv.org/abs/2505.13864"> Graphon Mixtures </a><br>
+Venue: AISTATS 2026 (Accepted) <br>
+
+TLDR: This paper proposes a generative method to generate dense or sparse graphs using a mixture of graphons where the sparse graphs are modelled using the inverse line graph.  <br><br> 
+
+<figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
+  <img src="/images/research/graphon_mixtures.png" alt="Graphons of line graphs" style="width:100%; border-radius:6px;">
+    <figcaption style="font-size:0.85em; text-align:center;">The overview of (U,W)-mixture graphs. A disjoint clique graph is sampled from the graphon U. The inverse line graph is a disjoint set of stars. A graph is sampled from the graphon W. Then it is joined with the star graphs resulting in a mixture graph. </figcaption>
+</figure>
+
+Real-world networks (social networks for example) have a distinctive dual character: a small number of highly connected hubs sitting alongside a large number of tight, dense communities. Existing generative models tend to handle one or the other, but not both. This paper introduces a **graphon mixture model** that explicitly captures this duality by combining sparse and dense graph components within a single unified framework, building on recent results about graphons of line graphs. A key theoretical contribution is a new condition on sparse graphs — the *max-degree condition* — which allows hubs to be identified and their connectivity structure to be estimated. The paper further shows that the graphon corresponding to the dense community component can also be recovered from the mixture. Experiments on synthetic data, citation networks, and social networks demonstrate that explicitly modelling the sparse hub structure, rather than folding everything into a single dense graphon, leads to better representations of the graphs we actually encounter in practice.
