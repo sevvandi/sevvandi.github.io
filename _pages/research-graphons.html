@@ -14,49 +14,17 @@ sidebar:
 
 <h3>Graphons of line graphs</h3>
 
+Sevvandi Kandanaarachchi, Cheng Soon Ong
+
+<a href="https://arxiv.org/abs/2409.01656"> Graphons of line graphs </a>
+
 This paper shows that for a subset of sparse graphs, their line graphs are dense. As such,  modeling the graphon of line graphs is useful for a subset of sparse graphs. 
 
 <figure style="float: right; margin: 0 0 1em 2em; width: 320px;">
   <img src="/images/research/linegraph_graphon.png" alt="Graphons of line graphs" style="width:100%; border-radius:6px;">
-    <figcaption style="font-size:0.85em; text-align:center;">Caption for your figure.</figcaption>
+    <figcaption style="font-size:0.85em; text-align:center;">Top row: Graphs of 1 to 4 disjoint stars. Recall the graphon𝑊 = 0 for star graphs.
+Middle row: Line graphs of disjoint stars in top row. Line graphs of star graphs
+are complete graphs. Bottom row: The graphons of the line graphs of the star
+graphs (taken as sequences) shown on top.</figcaption>
 </figure>
-
-<h3>Selected Publications</h3>
-<ul>
-  <li>
-    <a href="/publications/paper-slug/">Paper Title</a>,
-    <em>Journal Name</em>, 2023.
-  </li>
-  <li>
-    <a href="/publications/paper-slug-2/">Another Paper</a>,
-    <em>Conference Name</em>, 2022.
-  </li>
-</ul>
-
-<h3>Software</h3>
-<p>
-  <a href="https://github.com/sevvandi/packagename">packagename</a> — 
-  short description of what it does.
-  Also on <a href="https://cran.r-project.org/package=packagename">CRAN</a>.
-</p>
-```
-
-Repeat this pattern for each topic — `_pages/research-timeseries.html`, `_pages/research-ml.html`, etc., each with `sidebar: nav: "research"` in the front matter.
-
-## 4. File structure overview
-```
-_pages/
-  my-research.html              # landing page
-  research-anomaly.html         # topic pages
-  research-timeseries.html
-  research-ml.html
-  research-networks.html
-
-_data/
-  navigation.yml                # defines both main nav and research sidebar
-
-images/
-  research/
-    anomaly.png
-    timeseries.png
-    ml.png
+How do we understand the large-scale structure of networks that are too sparse for classical tools to handle? This paper tackles that question by introducing a surprising transformation: rather than analysing sparse graphs directly, we map them to their *line graphs* —- where edges become nodes —- and then estimate the graphon. The key insight is that certain sparse graphs, those satisfying a certain property, which we call the "square-degree property", produce surprisingly dense line graphs, making standard graphon estimation techniques suddenly applicable. Star graphs are a clean example: they are sparse, yet their line graphs are dense cliques, yielding meaningful, non-zero graphons that can distinguish between. For example, networks with different numbers of star-shaped hubs, all collapse to the trivial zero graphon when working with the original graphs. But when we model as line graphs they become dense. The method also extends to superlinear preferential attachment graphs, a common model for real-world growing networks. The work opens a new pathway for analysing a class of sparse graphs using the rich theory of dense graph limits.
