@@ -39,7 +39,7 @@ main:
 research:
   - title: "Graphons"
     url: /my-research/graphons/
-  - title: "Item Response Theory"
+  - title: "Item Response Theory and Algorithm Evaluation"
     url: /my-research/irt/
   - title: "Anomaly Detection"
     url: /my-research/anomaly/
