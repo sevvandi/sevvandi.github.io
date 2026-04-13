@@ -11,6 +11,7 @@ sidebar:
 Item Response Theory (IRT) is a suite of methods in educational psychometrics used to estimate characteristics of test questions and students from assessment scores. IRT has also become a popular tool in machine learning research for analysing the characteristics of learning algorithms and test instances. This set of papers explores the use of IRT in machine learning contexts.
 </p>
 
+<h2> IRT related ML algorithm evaluation</h2>
 
 <h3>Fairness evaluation with Item Response Theory</h3>
 
@@ -50,7 +51,18 @@ TLDR: This paper proposes an IRT framework in an inverted setting, which allows 
 
 <figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
   <img src="/images/research/airt.png" alt="Algorithmic-IRT" style="width:100%; border-radius:6px;">
-    <figcaption style="font-size:0.85em; text-align:center;"> Mapping IRT to the algorithm evaluation domain.</figcaption>
+    <figcaption style="font-size:0.85em; text-align:center;"> Mapping IRT to algorithm evaluation.</figcaption>
 </figure>
 
 Item Response Theory (IRT), originally developed in educational psychometrics, has recently been adapted to evaluate machine learning algorithms. This work presents a modified IRT‑based framework for analysing algorithm portfolios across multiple datasets, uncovering interpretable characteristics such as consistency and anomalousness. The approach provides clear, explainable insights into algorithm strengths and weaknesses without requiring additional dataset features, and is shown to be broadly applicable across diverse problem domains.
+
+
+<h3> Unsupervised anomaly detection ensembles using Item Response Theory </h3>
+Author: Sevvandi Kandanaarachchi <br>
+Venue: Information Sciences, 2022 <br>
+
+TLDR: This paper proposes an unsupervised anomaly detection ensemble using Item Response Theory. <br>
+
+<a href="https://www.sciencedirect.com/science/article/pii/S0020025521012639"> Unsupervised anomaly detection ensembles using Item Response Theory </a><br>
+
+Ensemble learning combines multiple models to improve predictive performance, but building ensembles for unsupervised anomaly detection is challenging due to the lack of labels. This work introduces an Item Response Theory (IRT)–based ensemble that leverages latent traits to infer hidden structure in the data. The approach downplays noisy detectors, emphasises more informative ones, and consistently outperforms existing ensemble methods—even when individual detectors are weakly correlated.
