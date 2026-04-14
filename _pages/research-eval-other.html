@@ -38,6 +38,16 @@ TLDR: There’s no one‑size‑fits‑all solution for removing tiling artifact
 Time‑of‑flight secondary ion mass spectrometry (ToF‑SIMS) imaging enables high‑resolution chemical analysis over large surface areas, but tiled scans often suffer from visual artifacts such as intensity gradients and discontinuities. This work systematically evaluates six computational methods for correcting these tiling artifacts across multiple hyperspectral ToF‑SIMS and OrbiTrapSIMS datasets. Through quantitative analysis and a user‑based quality survey, we show that artifact correction effectiveness strongly depends on the dataset, with no single method performing best in all cases. The study provides practical insights and recommendations to help researchers choose appropriate correction strategies for large‑area SIMS imaging.
 
 
+<h3> Comparison of new computational methods for spatial modelling of malaria</h3>
 
+Authors: Spencer Wong, Jennifer A Flegg, Nick Golding, Sevvandi Kandanaarachchi <br>
+Venue: Malaria Journal <br>
 
+TLDR: An evaluation study of 4 geostatiscal methods for malaria modeling. <br>
 
+<figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
+  <img src="/images/research/Malariamapping.png" alt="MalariaMaps" style="width:100%; border-radius:6px;">
+    <figcaption style="font-size:0.85em; text-align:center;"> Mapping malaria prevalence from discrete points to a contigous region.</figcaption>
+</figure>
+
+As geostatistical models are increasingly used to map diseases like malaria across large regions, researchers face a growing challenge: traditional methods are powerful but computationally slow. This work compares four modern “fast” spatial modelling approaches—INLA, GPBoost, Fixed Rank Kriging, and Spatial Random Forests—using malaria prevalence data at national and continental scales. While some methods struggle to scale as data grow, others perform well but require careful modelling choices to avoid unreliable predictions. Overall, the study shows that scalable tools like INLA and FRK hold great promise for large‑scale disease mapping, provided their assumptions and parameters are chosen with care.
