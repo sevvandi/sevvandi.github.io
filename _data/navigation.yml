@@ -44,7 +44,7 @@ research:
     url: /my-research/algoeval/irt/
     children:
       - title: "Item Response Theory in ML"
-        url: /my-research/algoeval/
+        url: /my-research/algoeval/irt/
       - title: "Instance Space Analysis"
         url: /my-research/algoeval/isa/
       - title: "Other Evaluation Studies"
