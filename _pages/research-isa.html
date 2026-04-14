@@ -7,4 +7,59 @@ sidebar:
   nav: "research"
 ---
 
-Under construction
+Instance Space Analysis (ISA) is a methodology used to evaluate a portfolio of algorithms and elucidate their strengths and weaknesses. See <a href="#ref1">[1]</a> for more details. 
+
+<h3>References</h3>
+<ol>
+  <li id="ref1">
+    Smith-Miles, Kate, and Mario Andrés Muñoz. 
+    <a href="https://dl.acm.org/doi/abs/10.1145/3572895">Instance space analysis for algorithm testing: Methodology and software tools</a>, 
+    <em>ACM Computing Surveys 55.12 (2023): 1-31.</em>, 
+  </li>
+</ol>
+
+The following set of papers use Instance Space Analysis to evaluate algorithms. 
+
+<h3> ISA<sup>3</sup>: a 3-dimensional expansion of Instance Space Analysis </h3>
+Connor's paper <br>
+Authors: Connor Simpson, Mario Andrés Muñoz, Sevvandi Kandanaarachchi, Ricardo J. G. B. Campello <br>
+Venue: Machine Learning, 2025
+
+TLDR: Moving Instance Space Analysis to 3D preserves more information and reveals clearer, previously hidden strengths of algorithms when evaluating diverse algorithm portfolios. <br>
+
+<a href="https://link.springer.com/article/10.1007/s10994-025-06871-5"> ISA<sup>3</sup>: a 3-dimensional expansion of instance space analysis </a><br>
+
+Evaluating algorithms depends heavily on how diverse and representative the test set is. This work extends Instance Space Analysis into 3D, preserving more information while maintaining interpretability through optimised visualisation. Alongside a new method for identifying algorithm portfolio footprints, the approach reveals previously hidden regions of algorithm strength, demonstrated through a case study on unsupervised anomaly detection.
+
+
+<h3> Benchmarking algorithm portfolio construction methods</h3>
+Authors: Mario Andrés Muñoz, Hamed Soleimani, Sevvandi Kandanaarachchi <br>
+Venue: GECCO, 2022 <br>
+TLDR: Smartly constructed algorithm portfolios reduce risk and outperform arbitrary ones, with some construction methods producing especially low‑risk yet differently robust portfolios. <br>
+
+<a href="https://dl.acm.org/doi/10.1145/3520304.3528880"> Benchmarking algorithm portfolio construction methods</a> <br>
+
+
+Algorithm portfolios combine multiple algorithms to reduce the risk of poor performance from any single choice. This work benchmarks five portfolio construction methods on standard ASLib scenarios, analysing how well they balance risk (unsolved instances) and robustness (reliance on a dominant algorithm). The results show that carefully constructed portfolios consistently outperform arbitrary ones, with two methods standing out for producing low‑risk portfolios with differing levels of robustness.
+
+<h3> On normalization and algorithm selection for unsupervised outlier detection</h3>
+Authors: Sevvandi Kandanaarachchi, Mario A Muñoz, Rob J Hyndman, Kate Smith-Miles <br>
+Venue: Data Mining and Knowledge Discovery, 2020 <br>
+TLDR: Outlier detection performance depends heavily on both the dataset and how it’s normalised, and analysing these combinations helps identify the best method for each case. <br>
+<a href="https://link.springer.com/article/10.1007/s10618-019-00661-z"> On normalization and algorithm selection for unsupervised outlier detection </a><br>
+
+
+The effectiveness of outlier detection methods depends not only on the dataset itself, but also on how the data is normalised. This work shows that normalisation changes key properties such as nearest‑neighbour relationships and data density, directly influencing which points are identified as outliers. By analysing combinations of normalisation schemes and detection methods using instance space analysis, the study reveals their relative strengths and weaknesses and provides guidance on selecting the most suitable method for a given dataset.
+
+
+<h3> Instance Space Analysis for unsupervised outlier detection</h3>
+Authors: Sevvandi Kandanaarachchi, Mario A Munoz, Kate Smith-Miles <br>
+Venue: Evaluation and Experimental Design in Data Mining and Machine Learning, 2019 <br>
+TLDR: By measuring key dataset properties, this work helps predict which unsupervised outlier detection method will perform best for a given problem. <br> 
+
+Unsupervised outlier detection methods perform best when their definition of an outlier aligns with the structure of the data. This work introduces a set of meta‑features that capture key dataset properties and uses them to conduct the first instance space analysis of unsupervised outlier detection methods. The analysis reveals method‑specific strengths and weaknesses and enables accurate recommendations of suitable outlier detection techniques for different datasets.
+
+
+
+
+  
