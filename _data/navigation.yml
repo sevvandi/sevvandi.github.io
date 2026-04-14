@@ -36,21 +36,20 @@ main:
   #   url: /markdown/
   
   
+
 research:
   - title: "Graphons"
     url: /my-research/graphons/
   - title: "IRT and Algorithm Evaluation"
     url: /my-research/algoeval/irt/
+    children:
+      - title: "Item Response Theory in ML"
+        url: /my-research/algoeval/irt/
+      - title: "Instance Space Analysis"
+        url: /my-research/algoeval/isa/
+      - title: "Other Evaluation Studies"
+        url: /my-research/algoeval/other/
   - title: "Anomaly Detection"
     url: /my-research/anomaly/
   - title: "Others"
     url: /my-research/other/
-
-
-algoevaluation:
-  - title: "Item Response Theory in ML"
-    url: /my-research/algoeval/irt/
-  - title: "Instance Space Analysis"
-    url:  /my-research/algoeval/isa/
-  - title: "Other evaluation studies"  
-    url: /my-research/algoeval/other/
