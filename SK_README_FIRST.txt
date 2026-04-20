@@ -40,8 +40,10 @@
   -- Add a .md file for each publication
 
 6. How to update a research topic section including title
- -- In _data folder (at the root) go to navigation.yml 
- -- Under research you can update the post heading
- -- Then go to _pages folder (at the root)
- -- The files, research-irt.html, research-graphons.html, research-anomaly.html contain the posts
- -- Edit the files as necessay.
+ -- If you want to update the nav bar 
+    -- In _data folder (at the root) go to navigation.yml 
+    -- Under research you can update the post heading
+ -- To update the post itself
+    -- Go to _pages folder (at the root)
+    -- The files, research-irt.html, research-graphons.html, research-anomaly.html contain the posts
+    -- Edit the files as necessay.
