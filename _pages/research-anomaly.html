@@ -76,3 +76,14 @@ TLDR: Honeyboost detects insider threats early by monitoring internal network tr
 
 As insider cyber threats continue to rise, early detection within internal networks is becoming increasingly important. Honeyboost is a framework designed to predict malicious insider activity or malware by combining network anomaly detection with honeypots deployed inside the local network rather than at the perimeter. By using lookout—an anomaly detection method based on extreme value theory—Honeyboost achieves low false positive rates while identifying suspicious nodes before they interact with the honeypot. Through a combination of temporal (horizontal) and protocol‑specific (vertical) analysis, the framework provides effective, unsupervised detection of anomalous behaviour in LAN traffic, showing strong potential for early cyber‑attack prediction.
 
+
+<h3> Detection of anomalous network nodes via hierarchical prediction and Extreme Value Theory</h3>
+Authors: Sevvandi Kandanaarachchi, Mahdi Abolghasemi, Hideya Ochiai, Asha Rao, Conrad Sanderson <br>
+
+TLDR: Model ARP behaviour over time and use extreme value theory to spot truly abnormal activity, reducing false positives when detecting compromised devices in industrial networks.<br>
+
+<a href="https://arxiv.org/abs/2304.13941"> Detection of anomalous network nodes via hierarchical prediction and Extreme Value Theory </a><br>
+
+
+As cyber‑attacks on industrial networks grow more sophisticated, traditional signature‑based defences are becoming less effective—especially once malware is already inside the network. Infected devices often reveal themselves through unusual patterns in Address Resolution Protocol (ARP) traffic. This work introduces a two‑stage approach that first models normal ARP behaviour using time‑series prediction, then applies Extreme Value Theory to reliably flag truly abnormal activity. By accounting for the heavy‑tailed nature of network traffic, the method significantly reduces false alarms, helping address alert fatigue while enabling more reliable detection of compromised devices.
+
