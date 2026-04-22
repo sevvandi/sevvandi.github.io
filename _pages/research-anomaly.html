@@ -8,7 +8,7 @@ sidebar:
 ---
 
 <p>
- Extreme Value Theory (EVT) is used to model extreme events like 100-year old floods. Detecting anomalies using EVT reduces falsely identifying observations as anomalies. This set of papers are methodological and applied contributions using EVT to detect anomalies.
+ Extreme Value Theory (EVT) is used to model extreme events like 100-year old floods. Detecting anomalies using EVT reduces falsely identifying observations as anomalies. This set of papers are methodological and applied contributions using EVT to detect anomalies. The applications mostly come from cyber security. 
 </p>
 
 
@@ -45,11 +45,34 @@ We do theoretical proofs of bandwidth convergence and update the lookout algorit
 Authors: Sevvandi Kandanaarachchi, Rob J. Hyndman, Conrad Sanderson <br>
 Venue: 11th International Conference on Soft Computing & Machine Intelligence (ISCMI), 2024 <br>
 
-<figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
-  <img src="/images/research/oddnet.png" alt="oddnet" style="width:100%; border-radius:6px;">
-    <figcaption style="font-size:0.85em; text-align:center;"> The algorithm</figcaption>
-</figure>
-
 TLDR: Model the network’s time dynamics first, then use extreme value theory to flag true anomalies reducing false positives. <br>
 
+<a href="https://ieeexplore.ieee.org/abstract/document/10851659"> Extreme value modelling of feature fesiduals for anomaly detection in dynamic graphs </a><br>
+
+<figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
+  <img src="/images/research/oddnet.png" alt="oddnet" style="width:100%; border-radius:6px;">
+    <figcaption style="font-size:0.85em; text-align:center;"> The main components of the algorithm. </figcaption>
+</figure>
+
 Detecting anomalies in evolving networks is crucial for applications such as identifying transport disruptions or cyber attacks, yet existing methods often struggle with high false positive rates and complex graph dynamics. This work introduces a new approach that explicitly models temporal dependencies by analysing time series of graph features and removing these effects through analysing residuals. Extreme Value Theory is then applied to reliably identify truly abnormal behaviour, leading to more accurate detection with fewer false alarms. 
+
+
+
+
+
+<h3> Honeyboost: Boosting honeypot performance with data fusion and anomaly detection </h3>
+
+Authors: Sevvandi Kandanaarachchi, Hideya Ochiai, Asha Rao  <br>
+Venue: Expert Systems with Applications, 2022 <br>
+
+TLDR: Honeyboost detects insider threats early by monitoring internal network traffic with low false positives, combining anomaly detection and honeypots inside the LAN rather than at the network perimeter. <br>
+
+<a href="https://www.sciencedirect.com/science/article/pii/S0957417422004821"> Honeyboost: Boosting honeypot performance with data fusion and anomaly detection  </a><br>
+
+<figure style="float: left; margin: 0 0 1em 2em; width: 420px;">
+  <img src="/images/research/honeyboost.jpg" alt="honeyboost" style="width:100%; border-radius:6px;">
+    <figcaption style="font-size:0.85em; text-align:center;"> Honeyboost sits within the local area network.  </figcaption>
+</figure>
+
+As insider cyber threats continue to rise, early detection within internal networks is becoming increasingly important. Honeyboost is a framework designed to predict malicious insider activity or malware by combining network anomaly detection with honeypots deployed inside the local network rather than at the perimeter. By using lookout—an anomaly detection method based on extreme value theory—Honeyboost achieves low false positive rates while identifying suspicious nodes before they interact with the honeypot. Through a combination of temporal (horizontal) and protocol‑specific (vertical) analysis, the framework provides effective, unsupervised detection of anomalous behaviour in LAN traffic, showing strong potential for early cyber‑attack prediction.
+
