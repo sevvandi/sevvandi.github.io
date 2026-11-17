@@ -17,13 +17,17 @@ author_profile: true
     <div class="teaching-row">
       <div class="teaching-year">{{ item.year }}</div>
       <div class="teaching-org">{{ item.org }}</div>
-      <div class="teaching-course">
-        {% if item.url %}
-          <a href="{{ item.url }}" target="_blank">{{ item.course }}</a>
-        {% else %}
-          {{ item.course }}
-        {% endif %}
-      </div>
+        <div class="teaching-course">
+          {% if item.url %}
+            {% if item.url contains '://' %}
+              <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.course }}</a>
+            {% else %}
+              <a href="{{ item.url | relative_url }}">{{ item.course }}</a>
+            {% endif %}
+          {% else %}
+            {{ item.course }}
+          {% endif %}
+        </div>
     </div>
   {% endfor %}
 </div>
