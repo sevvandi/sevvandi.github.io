@@ -19,7 +19,6 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 ## Outline
 
-## Outline
 
 ### Part 1: Introduction to graphons
 
@@ -29,6 +28,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 </div>
+- [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/1_Graphons_Introduction.pdf' | relative_url }})
 
 ### Part 2: Mathematical properties of graphons
 
@@ -38,6 +38,8 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 </div>
+- [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/2_Mathematical_Properties_of_Graphons.pdf' | relative_url }})
+
 
 ### Part 3: Some approaches for sparse graphs
 
@@ -47,6 +49,8 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 </div>
+- [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/3_Sparse_Graph_Approaches.pdf' | relative_url }})
+
 
 ### Part 4: Graphon estimation
 
@@ -56,6 +60,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 </div>
+- [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/4_Graphon_Estimation.pdf' | relative_url }})
 
 ### Part 5: Graphons in machine learning
 
@@ -65,10 +70,11 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 </div>
+- [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/5_Graphons_in_ML.pdf' | relative_url }})
+
 
 ## Materials
-
-- [Slides](#) *(add link)*
+- [Slides (PDF)](#)({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
 - [Code/Notebooks](#) *(add link)*
 
 ## References
