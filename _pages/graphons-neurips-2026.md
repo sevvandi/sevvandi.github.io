@@ -162,7 +162,7 @@ graphons in 3 different ways: convex addition, disjoint union and joining disjoi
 
 ## Acknowledgements
 
-The Jupyter worksheets were developed with assistance from Anthropic's Claude. The first author reviewed, tested and is responsible for all content. The code in `Caron_Fox_BNPGraph.py` is a Python port of the MATLAB [`BNPgraph`](http://www.stats.ox.ac.uk/~caron/code/BNPgraph) package by Francois Caron, created with the help of Claude. It follows Caron and Fox (2017).
+The Jupyter worksheets were developed with assistance from Anthropic's Claude. The first author reviewed, tested and is responsible for all content. The code in `Caron_Fox_BNPGraph.py` is a Python port of the MATLAB [`BNPgraph`](https://www.stats.ox.ac.uk/~caron/code/bnpgraph/demo_graph.html) package by Francois Caron, created with the help of Claude. It follows Caron and Fox (2017).
 
 ## References
 
