@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+pandas
+python-igraph
+networkx
+POT
+scikit-image
+opencv-python
+torch
+siren-pytorch
+einops

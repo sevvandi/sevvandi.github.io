@@ -120,6 +120,6 @@ The Jupyter worksheets were drafted with Anthropic's Claude. The author reviewed
 
 7. Sogan, R. B. and Rebafka, T. (2026). Low-Complexity and Consistent Graphon Estimation from Multiple Networks. In *Proceedings of The 29th International Conference on Artificial Intelligence and Statistics*, PMLR 300:1441-1449. [Link](https://proceedings.mlr.press/v300/sogan26a.html)
 
-8. Wijesinghe, A., Kandanaarachchi, S., Steinberg, D. M. and Ong, C. S. (2026). Flowette: Flow Matching with Graphette Priors for Graph Generation. In *The Fortieth Annual Conference on Neural Information Processing Systems*. [Link](https://openreview.net/forum?id=d3pAaxyrAY)
+8. Wijesinghe, A., Kandanaarachchi, S., Steinberg, D. M. and Ong, C. S. (2026). Flowette: Flow Matching with Graphette Priors for Graph Generation. In *The Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS 2026)*. [Link](https://openreview.net/forum?id=d3pAaxyrAY)
 
 9. Xia, X., Mishne, G. and Wang, Y. (2023). Implicit Graphon Neural Representation. In *Proceedings of The 26th International Conference on Artificial Intelligence and Statistics*, PMLR 206:10619-10634. [Link](https://proceedings.mlr.press/v206/xia23a.html)
