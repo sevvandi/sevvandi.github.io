@@ -153,7 +153,7 @@ graphons in 3 different ways: convex addition, disjoint union and joining disjoi
 6. Graphon estimation with JGS: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb' | relative_url }})
 
 
-## Other Materials
+## Downloads
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
 - [Mini-course write-up (PDF)]({{ '/assets/docs/Graphons_NeurIPS_2026_Writeup.pdf' | relative_url }})
 
