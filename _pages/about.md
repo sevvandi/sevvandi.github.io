@@ -16,7 +16,7 @@ I do methodological and applied research in statistical machine learning. On the
 My research ethos is that applied and methodological research should go hand in hand and strive for a harmonious balance. Often applications point to a research gap, driving the cog wheels of methodological research. Over the years, machine learning has become broader with deepening intersections with other scientific disciplines, including mathematics. I am interested in branches of applied mathematics that have these intersections.
 
 
-
+**New:** [Graphons for Machine Learning, NeurIPS 2026 Education Track]({{ '/teaching/graphons-neurips-2026/' | relative_url }})
 
 
 
