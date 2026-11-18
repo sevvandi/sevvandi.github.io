@@ -19,7 +19,7 @@ My research ethos is that applied and methodological research should go hand in 
 
 ## News
 
-- **December 2026:** I will be at NeurIPS 2026.
+- **December 2026:** I will be at NeurIPS 2026 in Sydney.
   - I am presenting an Education Track mini-course, [Graphons for Machine Learning: Theory, Estimation, and Applications]({{ '/teaching/graphons-neurips-2026/' | relative_url }}), with videos, slides and worksheets.
   - I also have two papers at the conference: 
     - Main conference: [Flowette: Flow Matching with Graphette Priors for Graph Generation](https://openreview.net/forum?id=d3pAaxyrAY).
