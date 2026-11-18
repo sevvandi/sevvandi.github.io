@@ -17,7 +17,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 **Prerequisites:** basic graph theory, linear algebra and calculus.
 
-## Outline
+## Course Materials
 
 
 ### Part 1: Introduction to graphons
