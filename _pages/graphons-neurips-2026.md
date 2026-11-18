@@ -16,7 +16,7 @@ Graphons are graph limits. Traditionally a graphon is defined on a unit square a
 
 Graphons are increasingly used in machine learning: for GNN transferability across graphs of different sizes, and for neural network pruning, among other applications. Estimating a graphon from observed graph data is itself an active research problem, with newer approaches, such as IGNR and JGS,  offering more flexible, learnable alternatives to classical estimators. At the same time, while a rich body of theory has been developed for sparse graphons and related extensions, these models have seen relatively limited adoption within machine learning, despite the prevalence of sparse graphs in real-world applications.
 
-Together, this combination of graphons' growing role in core ML tasks, a rapidly evolving landscape of estimation methods, and the largely untapped potential of sparse graphon models motivates their inclusion in the NeurIPS 2026 Education Track. This tutorial covers two state-of-the-art applications and emerging opportunities for leveraging graphons in machine learning.
+Together, this combination of graphons' growing role in core ML tasks, a rapidly evolving landscape of estimation methods, and the largely untapped potential of sparse graphon models motivates their inclusion in the NeurIPS 2026 Education Track. This tutorial covers some applications and emerging opportunities for leveraging graphons in machine learning.
 
 
 **Prerequisites:** basic graph theory, linear algebra and calculus.
