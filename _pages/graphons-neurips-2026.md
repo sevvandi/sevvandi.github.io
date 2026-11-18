@@ -82,12 +82,13 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 ## Materials
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
+- [Mini-course write-up (PDF)]({{ '/assets/docs/Graphons_NeurIPS_2026_Writeup.pdf' | relative_url }})
 
 **Worksheets**
 
 1. Introduction to graphons: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb' | relative_url }})
 
-2. Kallenberg exchangeable graphs:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/02_caron_fox_bnpgraph.ipynb' | relative_url }})
+2. Kallenberg exchangeable graphs  (Caron and Fox, 2017):  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/02_caron_fox_bnpgraph.ipynb' | relative_url }})
 
 3. Graphon mixtures:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb' | relative_url }})
 
