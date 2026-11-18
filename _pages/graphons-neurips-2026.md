@@ -47,13 +47,11 @@ On completion of this mini-course, participants will be able to:
 4. Wang, Y., Cheng, Y.-H., Mukherjee, D. and Cheng, H. (2025). Transfer Learning on Edge Connecting Probability Estimation Under Graphon Model. In *The Thirty-ninth Annual Conference on Neural Information Processing Systems*.[Link](https://dl.acm.org/doi/10.52202/085713-1143)
 
 
-## Teaching Materials
+## Teaching Materials 
 
 Teaching materials consist of videos, slides and Jupyter worksheets detailed as follows:
 
-### Videos
-
-#### Part 1: Introduction to graphons
+### Part 1: Introduction to graphons
 This video introduces graphons as a generative model and
 samples graphs from different graphons. It combines graphons in 3 different ways: convex
 addition, disjoint union and joining disjoint graphons.
@@ -69,7 +67,7 @@ addition, disjoint union and joining disjoint graphons.
 
 
 
-#### Part 2: Mathematical properties of graphons
+### Part 2: Mathematical properties of graphons
 Mathematical properties of graphons: This video introduces graphons as graph limits
 and explores convergence from the lens of homomorphism density and the cut metric.
 Furthermore, it briefly discusses the assumption of exchangeability.
@@ -84,7 +82,7 @@ Furthermore, it briefly discusses the assumption of exchangeability.
 
 
 
-#### Part 3: Some approaches for sparse graphs
+### Part 3: Some approaches for sparse graphs
 Sparse graph modelling with graphons: This video explores different sparse extensions
 of traditional graphons.
 
@@ -105,7 +103,7 @@ sparse graph generation mechanisms including Kallenberg exchangeable graphs deta
 
 
 
-#### Part 4: Graphon estimation
+### Part 4: Graphon estimation
 Graphon estimation: This video introduces graphon estimation when a single graph or
 multiple graphs are observed.
 
@@ -125,7 +123,7 @@ These 2 worksheets explores graphon estimation using IGNR (Xia et al, 2023) and 
 
 
 
-#### Part 5: Graphons in machine learning
+### Part 5: Graphons in machine learning
 Graphons in machine learning: This video discusses 2 applications of graphons – GNN
 transferability and neural network pruning.
 <div class="video-embed">
