@@ -156,7 +156,6 @@ graphons in 3 different ways: convex addition, disjoint union and joining disjoi
 ## Downloads
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
 - [Mini-course write-up (PDF)]({{ '/assets/docs/Graphons_NeurIPS_2026_Writeup.pdf' | relative_url }})
-
 - [All worksheets (ZIP)]({{ '/assets/notebooks/NeurIPS_2026/worksheets.zip' | relative_url }})
 
 ## Acknowledgements
