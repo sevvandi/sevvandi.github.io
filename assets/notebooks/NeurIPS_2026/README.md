@@ -18,7 +18,7 @@ The worksheets let you run the examples covered in the course videos. Each works
 ## Folder structure
 
 ```
-Worksheets/
+NeurIPS_2026/
 ├── notebooks/            the six worksheets
 ├── src/                  helper modules used by the notebooks
 │   ├── graphons.py
