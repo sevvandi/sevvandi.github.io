@@ -103,7 +103,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 ## Acknowledgements
 
-The Jupyter worksheets were drafted with Anthropic's Claude. The author reviewed, tested and is responsible for all content.
+The Jupyter worksheets were drafted with Anthropic's Claude. The first author reviewed, tested and is responsible for all content.
 
 ## References
 
