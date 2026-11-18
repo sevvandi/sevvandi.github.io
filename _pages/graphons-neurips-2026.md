@@ -82,7 +82,23 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 ## Materials
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
-- [Code/Notebooks](#) *(add link)*
+
+**Worksheets**
+
+1. Introduction to graphons: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb' | relative_url }})
+
+2. Kallenberg exchangeable graphs:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb' | relative_url }})
+
+3. Graphon mixtures:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/03_uw_mixtures.ipynb' | relative_url }})
+
+4. Graphettes: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/04_graphettes.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/04_graphettes.ipynb' | relative_url }})
+
+5. Graphon estimation with IGNR: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/05_IGNR_single_example.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/05_IGNR_single_example.ipynb' | relative_url }})
+
+6. Graphon estimation with JGS: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/06_jgs_graphon_estimation.ipynb' | relative_url }})
+
+
+[Download all worksheets (ZIP)]({{ '/assets/notebooks/NeurIPS_2026/worksheets.zip' | relative_url }})
 
 ## References
 
