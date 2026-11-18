@@ -31,6 +31,8 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/1_Graphons_Introduction.pdf' | relative_url }})
 - Worksheet 1: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/01_introduction_to_graphons.ipynb' | relative_url }})
 
+---
+
 ### Part 2: Mathematical properties of graphons
 
 <div class="video-embed">
@@ -41,6 +43,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 </div>
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/2_Mathematical_Properties_of_Graphons.pdf' | relative_url }})
 
+---
 
 ### Part 3: Some approaches for sparse graphs
 
@@ -55,6 +58,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 - Worksheet 3: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb' | relative_url }})
 - Worksheet 4: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/04_graphettes.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/04_graphettes.ipynb' | relative_url }})
 
+---
 
 ### Part 4: Graphon estimation
 
@@ -68,6 +72,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 - Worksheet 5: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/05_IGNR_single_example.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/05_IGNR_single_example.ipynb' | relative_url }})
 - Worksheet 6: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb' | relative_url }})
 
+---
 
 ### Part 5: Graphons in machine learning
 
