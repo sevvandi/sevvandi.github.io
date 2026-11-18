@@ -13,7 +13,7 @@ author_profile: true
 
 ## Overview
 
-Graphons are graph generative models as well as limits of graph sequences, capturing a graph's structure in a form that doesn't depend on its size. This mini-course is a practical introduction to graphons, sparse graph extensions, graphon estimation, and their use in modern machine learning, including GNN transferability and neural network pruning. It combines short videos, slides and interactive Jupyter worksheets.
+Graphons are graph generative models as well as limits of graph sequences, capturing a graph's structure in a form that doesn't depend on its size. This mini-course is a practical introduction to graphons, sparse graph extensions, graphon estimation, and their use in modern machine learning, including GNN transferability and neural network pruning. Each part includes a short video and slides, with Jupyter worksheets for trying out the examples hands-on.
 
 **Prerequisites:** basic graph theory, linear algebra and calculus.
 
@@ -29,6 +29,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allowfullscreen></iframe>
 </div>
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/1_Graphons_Introduction.pdf' | relative_url }})
+- Worksheet 1: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/main/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb' | relative_url }})
 
 ### Part 2: Mathematical properties of graphons
 
@@ -74,7 +75,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 
 ## Materials
-- [Slides (PDF)](#)({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
+- [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/Neurips_Education_All.pdf' | relative_url }})
 - [Code/Notebooks](#) *(add link)*
 
 ## References
