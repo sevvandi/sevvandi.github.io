@@ -100,6 +100,29 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 [Download all worksheets (ZIP)]({{ '/assets/notebooks/NeurIPS_2026/worksheets.zip' | relative_url }})
 
+## Acknowledgements
+
+The Jupyter worksheets were drafted with Anthropic's Claude. The author reviewed, tested and is responsible for all content.
+
 ## References
+1. Caron, F. and Fox, E. B. (2017). Sparse graphs using exchangeable random measures. *Journal of the Royal Statistical Society: Series B*, 79(5), 1295-1366. [Link](https://doi.org/10.1111/rssb.12233)
+
+2. Lovász, L. (2012). *Large Networks and Graph Limits*. American Mathematical Society. [Link](https://www.sciencedirect.com/science/article/pii/S1574013713000294)
+
+3. Kandanaarachchi, S., and Ong C. S. (2026). Proceedings of The 29th International Conference on Artificial Intelligence and Statistics, PMLR 300:514-522. [Link](https://proceedings.mlr.press/v300/kandanaarachchi26a.html)
+
+4. Wijesinghe, A., Kandanaarachchi, S., Steinberg, D. M. and Ong, C. S. (2026). Flowette: Flow Matching with Graphette Priors for Graph Generation. In *The Fortieth Annual Conference on Neural Information Processing Systems*. [Link](https://openreview.net/forum?id=d3pAaxyrAY)
+
+5. Borgs, C., Chayes, J. T., Cohn, H., & Holden, N. (2018). Sparse exchangeable graphs and their limits via graphon processes. Journal of Machine Learning Research, 18(210), 1-71. [Link](https://www.jmlr.org/papers/v18/16-421.html)
+
+6. Xia, X., Mishne, G. and Wang, Y. (2023). Implicit Graphon Neural Representation. In *Proceedings of The 26th International Conference on Artificial Intelligence and Statistics*, PMLR 206:10619-10634. [Link](https://proceedings.mlr.press/v206/xia23a.html)
+
+7. Sogan, R. B. and Rebafka, T. (2026). Low-Complexity and Consistent Graphon Estimation from Multiple Networks. In *Proceedings of The 29th International Conference on Artificial Intelligence and Statistics*, PMLR 300:1441-1449. [Link](https://proceedings.mlr.press/v300/sogan26a.html)
+
+
+8. Ruiz, L., Chamon, L. and Ribeiro, A. (2020). Graphon Neural Networks and the Transferability of Graph Neural Networks. In *Advances in Neural Information Processing Systems 33 (NeurIPS 2020)*. [Link](https://proceedings.neurips.cc/paper/2020/hash/12bcd658ef0a540cabc36cdf2b1046fd-Abstract.html)
+
+
+9. Pham, H., Ta, T.-A., Jacobs, T., Burkholz, R. and Tran-Thanh, L. (2025). The Graphon Limit Hypothesis: Understanding Neural Network Pruning via Infinite Width Analysis. In *Advances in Neural Information Processing Systems 38 (NeurIPS 2025)*. [Link](https://neurips.cc/virtual/2025/poster/119150)
 
 *Add key papers here.*
