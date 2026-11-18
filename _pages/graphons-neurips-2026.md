@@ -18,7 +18,6 @@ Graphons are increasingly used in machine learning: for GNN transferability acro
 
 Together, this combination of graphons' growing role in core ML tasks, a rapidly evolving landscape of estimation methods, and the largely untapped potential of sparse graphon models motivates their inclusion in the Education Track. Such a tutorial would cover both state-of-the-art applications and emerging opportunities for leveraging graphons in machine learning.
 
-# Graphons are graph generative models as well as limits of graph sequences, capturing a graph's structure in a form that doesn't depend on its size. This mini-course is a practical introduction to graphons, sparse graph extensions, graphon estimation, and their use in modern machine learning, including GNN transferability and neural network pruning. Each part includes a short video and slides, with Jupyter worksheets for trying out the examples hands-on.
 
 **Prerequisites:** basic graph theory, linear algebra and calculus.
 
