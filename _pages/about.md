@@ -16,8 +16,11 @@ I do methodological and applied research in statistical machine learning. On the
 My research ethos is that applied and methodological research should go hand in hand and strive for a harmonious balance. Often applications point to a research gap, driving the cog wheels of methodological research. Over the years, machine learning has become broader with deepening intersections with other scientific disciplines, including mathematics. I am interested in branches of applied mathematics that have these intersections.
 
 
-**New:** [Graphons for Machine Learning, NeurIPS 2026 Education Track]({{ '/teaching/graphons-neurips-2026/' | relative_url }})
 
+## News
 
+- **December 2026:** I will be at NeurIPS 2026.
+  - I am presenting an Education Track mini-course, [Graphons for Machine Learning: Theory, Estimation, and Applications]({{ '/teaching/graphons-neurips-2026/' | relative_url }}), with videos, slides and worksheets.
+  - I also have two papers at the conference: [Flowette: Flow Matching with Graphette Priors for Graph Generation](https://openreview.net/forum?id=d3pAaxyrAY) and [LLM judges are easier to talk down than up: a Bayesian item response analysis](https://openreview.net/forum?id=C4n0Zw0UTp).
 
 
