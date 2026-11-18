@@ -29,7 +29,7 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allowfullscreen></iframe>
 </div>
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/1_Graphons_Introduction.pdf' | relative_url }})
-- Worksheet 1: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb' | relative_url }})
+- Worksheet 1: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/01_introduction_to_graphons.ipynb' | relative_url }})
 
 ### Part 2: Mathematical properties of graphons
 
@@ -51,9 +51,9 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allowfullscreen></iframe>
 </div>
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/3_Sparse_Graph_Approaches.pdf' | relative_url }})
-- Worksheet 2: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb' | relative_url }})
-- Worksheet 3: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/03_uw_mixtures.ipynb' | relative_url }})
-- Worksheet 4: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/04_graphettes.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/04_graphettes.ipynb' | relative_url }})
+- Worksheet 2: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/02_caron_fox_bnpgraph.ipynb' | relative_url }})
+- Worksheet 3: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb' | relative_url }})
+- Worksheet 4: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/04_graphettes.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/04_graphettes.ipynb' | relative_url }})
 
 
 ### Part 4: Graphon estimation
@@ -65,8 +65,8 @@ Graphons are graph generative models as well as limits of graph sequences, captu
           allowfullscreen></iframe>
 </div>
 - [Slides (PDF)]({{ '/assets/slides/NeurIPS_2026/4_Graphon_Estimation.pdf' | relative_url }})
-- Worksheet 5: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/05_IGNR_single_example.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/05_IGNR_single_example.ipynb' | relative_url }})
-- Worksheet 6: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/06_jgs_graphon_estimation.ipynb' | relative_url }})
+- Worksheet 5: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/05_IGNR_single_example.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/05_IGNR_single_example.ipynb' | relative_url }})
+- Worksheet 6: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb' | relative_url }})
 
 
 ### Part 5: Graphons in machine learning
@@ -87,15 +87,15 @@ Graphons are graph generative models as well as limits of graph sequences, captu
 
 1. Introduction to graphons: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/01_introduction_to_graphons.ipynb' | relative_url }})
 
-2. Kallenberg exchangeable graphs:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb' | relative_url }})
+2. Kallenberg exchangeable graphs:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/02_caron_fox_bnpgraph.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/02_caron_fox_bnpgraph.ipynb' | relative_url }})
 
-3. Graphon mixtures:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/03_uw_mixtures.ipynb' | relative_url }})
+3. Graphon mixtures:  [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/03_uw_mixtures.ipynb' | relative_url }})
 
-4. Graphettes: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/04_graphettes.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/04_graphettes.ipynb' | relative_url }})
+4. Graphettes: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/04_graphettes.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/04_graphettes.ipynb' | relative_url }})
 
-5. Graphon estimation with IGNR: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/05_IGNR_single_example.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/05_IGNR_single_example.ipynb' | relative_url }})
+5. Graphon estimation with IGNR: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/05_IGNR_single_example.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/05_IGNR_single_example.ipynb' | relative_url }})
 
-6. Graphon estimation with JGS: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/06_jgs_graphon_estimation.ipynb' | relative_url }})
+6. Graphon estimation with JGS: [Open in Colab](https://colab.research.google.com/github/sevvandi/sevvandi.github.io/blob/master/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb) · [Download]({{ '/assets/notebooks/NeurIPS_2026/notebooks/06_jgs_graphon_estimation.ipynb' | relative_url }})
 
 
 [Download all worksheets (ZIP)]({{ '/assets/notebooks/NeurIPS_2026/worksheets.zip' | relative_url }})
