@@ -4,6 +4,8 @@ Jupyter worksheets for the NeurIPS 2026 Education Track mini-course *Graphons fo
 
 The worksheets let you run the examples covered in the course videos. Each worksheet matches one or more parts of the course.
 
+The videos, slides, worksheets and full course description are on the [course website](https://sevvandi.github.io/teaching/graphons-neurips-2026/).
+
 ## Contents
 
 | Worksheet | Topic | Course part |
