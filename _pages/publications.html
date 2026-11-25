@@ -50,7 +50,7 @@ author_profile: true
         {{ post.authors }}<br>
         {{ post.venue }}
         {% if post.paperurl %}
-          <br><a href="{{ post.paperurl }}">[PDF]</a>
+          <br><a href="{{ post.paperurl }}">[Link]</a>
         {% elsif post.content != blank %}
           <br>{{ post.content | markdownify | remove: "<p>" | remove: "</p>" }}
         {% endif %}
@@ -81,7 +81,7 @@ author_profile: true
         {{ post.authors }}<br>
         {{ post.venue }}
         {% if post.paperurl %}
-          <br><a href="{{ post.paperurl }}">[PDF]</a>
+          <br><a href="{{ post.paperurl }}">[Link]</a>
         {% elsif post.content != blank %}
           <br>{{ post.content | markdownify | remove: "<p>" | remove: "</p>" }}
         {% endif %}
