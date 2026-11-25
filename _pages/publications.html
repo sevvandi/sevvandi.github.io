@@ -9,14 +9,85 @@ author_profile: true
 {% endif %}
 {% include base_path %}
 
-{% assign sorted_pubs = site.publications | sort: "year" | reverse %}
-{% assign all_posts = sorted_pubs | group_by: "year" %}
+{% comment %} Build the list of years: the year field if present, otherwise the year of the date {% endcomment %}
+{% assign years = "" | split: "" %}
+{% for p in site.publications %}
+  {% if p.year %}
+    {% assign y = p.year | append: "" %}
+  {% else %}
+    {% assign y = p.date | date: "%Y" %}
+  {% endif %}
+  {% assign years = years | push: y %}
+{% endfor %}
+{% assign years = years | uniq | sort | reverse %}
 
-{% for year_group in all_posts %}
-  <h3>{{ year_group.name }}</h3>
-  {% assign items = year_group.items | sort: "date" | reverse %}
-  {% for post in items %}
-    ... (same entry markup as above)
+{% assign by_date = site.publications | sort: "date" | reverse %}
+{% assign by_title = site.publications | sort_natural: "title" %}
+
+{% for year in years %}
+  <h3>{{ year }}</h3>
+
+  {% comment %} 1) Entries with a date in the filename (YYYY-MM-DD-...), newest first {% endcomment %}
+  {% for post in by_date %}
+    {% if post.year %}
+      {% assign y = post.year | append: "" %}
+    {% else %}
+      {% assign y = post.date | date: "%Y" %}
+    {% endif %}
+    {% assign fname = post.path | split: "/" | last %}
+    {% assign dated = false %}
+    {% if fname contains "-" and fname.size > 10 %}
+      {% assign c4 = fname | slice: 4 %}
+      {% assign c7 = fname | slice: 7 %}
+      {% if c4 == "-" and c7 == "-" %}
+        {% assign dated = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if y == year and dated %}
+      <div class="publication-entry" style="margin-bottom: 1em; line-height: 1.6; font-size: 0.9em;">
+        <strong>{{ post.title }}</strong><br>
+        {{ post.authors }}<br>
+        {{ post.venue }}
+        {% if post.paperurl %}
+          <br><a href="{{ post.paperurl }}">[PDF]</a>
+        {% elsif post.content != blank %}
+          <br>{{ post.content | markdownify | remove: "<p>" | remove: "</p>" }}
+        {% endif %}
+      </div>
+    {% endif %}
   {% endfor %}
+
+  {% comment %} 2) Entries without a filename date, alphabetical by title {% endcomment %}
+  {% for post in by_title %}
+    {% if post.year %}
+      {% assign y = post.year | append: "" %}
+    {% else %}
+      {% assign y = post.date | date: "%Y" %}
+    {% endif %}
+    {% assign fname = post.path | split: "/" | last %}
+    {% assign dated = false %}
+    {% if fname contains "-" and fname.size > 10 %}
+      {% assign c4 = fname | slice: 4 %}
+      {% assign c7 = fname | slice: 7 %}
+      {% if c4 == "-" and c7 == "-" %}
+        {% assign dated = true %}
+      {% endif %}
+    {% endif %}
+
+    {% if y == year and dated == false %}
+      <div class="publication-entry" style="margin-bottom: 1em; line-height: 1.6; font-size: 0.9em;">
+        <strong>{{ post.title }}</strong><br>
+        {{ post.authors }}<br>
+        {{ post.venue }}
+        {% if post.paperurl %}
+          <br><a href="{{ post.paperurl }}">[PDF]</a>
+        {% elsif post.content != blank %}
+          <br>{{ post.content | markdownify | remove: "<p>" | remove: "</p>" }}
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
   <hr style="border: none; border-top: 1px solid #ccc; margin: 2em 0;">
 {% endfor %}

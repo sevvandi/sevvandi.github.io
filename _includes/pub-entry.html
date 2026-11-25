@@ -1,0 +1,10 @@
+<div class="publication-entry" style="margin-bottom: 1em; line-height: 1.6; font-size: 0.9em;">
+  <strong>{{ include.post.title }}</strong><br>
+  {{ include.post.authors }}<br>
+  {{ include.post.venue }}
+  {% if include.post.paperurl %}
+    <br><a href="{{ include.post.paperurl }}">[PDF]</a>
+  {% elsif include.post.content != blank %}
+    <br>{{ include.post.content | markdownify | remove: "<p>" | remove: "</p>" }}
+  {% endif %}
+</div>
