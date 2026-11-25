@@ -8,8 +8,10 @@ author_profile: true
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 {% include base_path %}
- 
-{% assign all_posts = site.publications | group_by: "year" | sort: "name" | reverse %}
+
+{% assign sorted_pubs = site.publications | sort: "date" | reverse %}
+{% assign all_posts = sorted_pubs | group_by_exp: "post", "post.date | date: '%Y'" %}
+
 {% for year_group in all_posts %}
   <h3>{{ year_group.name }}</h3>
   {% for post in year_group.items %}
