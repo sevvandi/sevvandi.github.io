@@ -1,4 +1,12 @@
 talks:
+  - date: "May 2026"
+    title: " Graphons and Sparsity"
+    url: "https://speakerdeck.com/sevvandi/graphons-and-sparsity"
+    venue: "La Trobe - Kyushu Joint Seminar on Mathematics for Industry"
+  - date: "May 2026"
+    title: "Graphons, Graphettes and Sparse Graphs"
+    url: "https://speakerdeck.com/sevvandi/graphon-mixtures-mds"
+    venue: "Deakin Warun Ponds A2I2 Seminar"
   - date: "Mar 2026"
     title: "Enhancing cyber defence effectiveness: reducing false positives in inner-LAN threat detection"
     url: "https://www.slideshare.net/slideshow/enhancing-cyber-defence-effectiveness-reducing-false-positives-in-inner-lan-threat-detection/286760224"
