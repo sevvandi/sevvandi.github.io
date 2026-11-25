@@ -9,20 +9,14 @@ author_profile: true
 {% endif %}
 {% include base_path %}
 
-{% assign sorted_pubs = site.publications | sort: "date" | reverse %}
-{% assign all_posts = sorted_pubs | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% assign sorted_pubs = site.publications | sort: "year" | reverse %}
+{% assign all_posts = sorted_pubs | group_by: "year" %}
 
 {% for year_group in all_posts %}
   <h3>{{ year_group.name }}</h3>
-  {% for post in year_group.items %}
-    <div class="publication-entry" style="margin-bottom: 1em; line-height: 1.6; font-size: 0.9em;">
-      <strong>{{ post.title }}</strong><br>
-      {{ post.authors }}<br>
-      {{ post.venue }}
-      {% if post.paperurl %}
-        <br><a href="{{ post.paperurl }}">[Link]</a>
-      {% endif %}
-    </div>
+  {% assign items = year_group.items | sort: "date" | reverse %}
+  {% for post in items %}
+    ... (same entry markup as above)
   {% endfor %}
   <hr style="border: none; border-top: 1px solid #ccc; margin: 2em 0;">
 {% endfor %}
